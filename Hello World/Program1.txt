@@ -1,0 +1,42 @@
+﻿// See https://aka.ms/new-console-template for more information
+/*Console.WriteLine("Hello, World!");
+
+var texteSaisi = "Salut"; 
+
+texteSaisi = "Coucou";
+
+texteSaisi = "ByeBye";
+
+texteSaisi =  Console.ReadLine(); //faut écrire la ligne ds le terminal
+
+int integerNumber; //Déclarer la variable
+
+integerNumber = 10; //Affecter la variable
+
+int intergerNumber2 = 5; //Initialiser la variable (Déclarer et afficher)
+
+byte b = 254;
+
+string texte;
+
+texte = "Hello";
+
+double pi =3.14159;
+
+Console.WriteLine(texteSaisi);*/
+
+int a =3, c =3;
+int sum = a + c;
+int dif = a - c;
+int prod = a * c;
+int quot = a / c;
+int mod = a % c; //quotient + reste
+
+var test = a < c;
+bool test2 = a > c;
+bool test3  = a == c;
+bool test4 = a != c;
+bool test5 = a >= c;
+bool test6 = a <= c;
+bool test7 = true;
+ 
