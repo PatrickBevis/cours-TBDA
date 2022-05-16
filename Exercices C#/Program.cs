@@ -300,6 +300,7 @@
 
 // Console.WriteLine($"Le carré de {nombre} est {result}");
 
+//Ex20 
 // Console.WriteLine("Saississez un nombre d'article");
 //   string saisie = Console.ReadLine();
 //  int nombre = Convert.ToInt32(saisie);
@@ -319,14 +320,29 @@
 //  prixTTC = nombre *(prixHT*tva+prixHT);
 // Console.WriteLine($"Le montant total est de {prixTTC}€");
 
-//double CalcPrixTTC(int nbArt, double prixHT, int txtva){
-//double result = nbArt * (prixHT + prixHT * txtva / 100);
-//return result;
-//}
-//
-//double prixTTC = CalcPrixTTC (4,5,20);
-//
-//Console.WriteLine(prixTTC);
+//alternative ex 20
+
+// double CalcPrixTTC(int nbArt, double prixHT, double txTva){
+// double result = nbArt * (prixHT + prixHT * txTva / 100);
+// return result;
+// }
+
+
+
+// Console.WriteLine("Saississez un nombre d'article");
+//   string saisie = Console.ReadLine();
+//  int nbArt = Convert.ToInt32(saisie);
+
+// Console.WriteLine("Saississez un prix HT");
+//   string saisie1 = Console.ReadLine();
+//  double prixHT = Convert.ToDouble(saisie1);
+
+//  Console.WriteLine("Saississez une tva");
+//   string saisie2 = Console.ReadLine();
+//  double txTva = Convert.ToDouble(saisie2);
+
+// double prixTTC = CalcPrixTTC (nbArt,prixHT,txTva);
+// Console.WriteLine(prixTTC);
 
 
 //Exo 21 : Écrire une fonction qui prend un nombre entier de minutes et le convertit en secondes 
@@ -336,52 +352,50 @@
 //return result;
 //}
 //
-//int secondes = CalcSecs(4);
+//int secondes = CalcSecs(minutes);
 //Console.WriteLine(secondes);
 //
 //Exo 22 : Écrire un algorithme permettant d’échanger les valeurs de deux variables de type string v1 et v2, et ce quel que soit leur contenu préalable (demander à l’utilisateur de saisir successivement les 2 valeurs avant de procéder à l’échange)
 //(echec)
 
-//string v1, v2;
-//void intervertir (string v1, string v2){
-//Console.WriteLine("Saisissez une premiere variable ?");
-//v1 = Console.ReadLine();
-//
-//Console.WriteLine("Saisissez une deuxieme variable ?");
-//v2 = Console.ReadLine();
-//
-// 
-//string temp = v1;
-//v1 = v2;
-//v2 = temp;
-//
-//
-//Console.WriteLine("Apres echenge :"); //swap
-//Console.WriteLine($"Le variable 1 est :{v1}");
-//Console.WriteLine($"Le variable 2 est :{v2}");
-//
+// string v1, v2;
+// void intervertir (string v1, string v2){
+
+// string temp = v1;
+// v1 = v2;
+// v2 = temp;
+
+// Console.WriteLine("Apres echenge :"); //swap
+// Console.WriteLine($"La variable 1 est :{v1}");
+// Console.WriteLine($"La variable 2 est :{v2}");
+// //
 // }
-//
-//intervertir(v1,v2);
+// Console.WriteLine("Saisissez une premiere variable ?");
+// v1 = Console.ReadLine();
+
+// Console.WriteLine("Saisissez une deuxieme variable ?");
+// v2 = Console.ReadLine();
+
+// intervertir(v1,v2);
 // 
-//string a, b;
-//void intervertir(string a, string b)
-//{
+// string a, b;
+// void intervertir(string a, string b)
+// {
 //    string temp = a;
 //    a = b;
 //    b = temp;
 //    Console.WriteLine($"\n«a» contient maintenant : {a}");
 //    Console.WriteLine($"«b» contient maintenant : {b}\n");
-//
-//}
-//Console.Write("Entrer une phrase dans la boite «a» : ");
-//a = Console.ReadLine();
-//
-//Console.Write("Entrer une phrase dans la boite «b» : ");
-//b = Console.ReadLine();
-//
-//
-//intervertir(a, b);
+
+// }
+// Console.Write("Entrer une phrase dans la boite «a» : ");
+// a = Console.ReadLine();
+
+// Console.Write("Entrer une phrase dans la boite «b» : ");
+// b = Console.ReadLine();
+
+
+// intervertir(a, b);
 
 
 //Exo 23 : Écrire un algorithme qui demande 3 nombres et affiche lequel est le plus grand et aussi petit
@@ -391,7 +405,16 @@
 //  return result;
 //}
 //
-//int maxi =max(4,54,45);
+//Console.Write("Entrer nombre 1");
+// nb1 = Console.ReadLine();
+
+//Console.Write("Entrer nombre 2");
+// nb2 = Console.ReadLine();
+
+//Console.Write("Entrer nombre 3");
+// nb3 = Console.ReadLine();
+
+//int maxi =max(nb1,nb2,nb3);
 //Console.WriteLine(maxi);
 //
 //int min(int nb1, int nb2, int nb3){
@@ -399,30 +422,108 @@
 //  return result;
 //}
 //
-//int mini =min(4,54,45);
+//int mini =min(nb1,nb2,nb3);
 //Console.WriteLine(mini);
 
+//alternative
+
+//Console.Write("Entrer nombre 1");
+// nb1 = Console.ReadLine();
+
+//Console.Write("Entrer nombre 2");
+// nb2 = Console.ReadLine();
+
+//Console.Write("Entrer nombre 3");
+// nb3 = Console.ReadLine();
+
+
+
+
 //Exo 24 : Écrire un algorithme qui demande 3 nombres et les affiche ensuite triés par ordre croissant
-void tries(int nb1, int nb2, int nb3){
-int[] tab = new int[] {59,15,54};
-Array.Sort(tab);
-foreach (int value in tab){
+// Console.WriteLine("v1");
+// int vSaisi = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("v2");
+// int vSaisi2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("v3");
+// int vSaisi3 = Convert.ToInt32(Console.ReadLine());
 
-  Console.WriteLine(value + "");
-}
+// void tries(int nb1, int nb2, int nb3){
+// int[] tab = new int[] {nb1,nb2,nb3};
+// Array.Sort(tab);
+// for (int i = 0; i < tab.Length; i++)
+// {
+//     Console.WriteLine(tab[i]);
+// }
+// }
 
-}
-
+// tries(vSaisi, vSaisi2, vSaisi3);
 
 //Exo 25 : Écrire un algorithme qui après avoir demandé un numéro de jour, de mois et d'année à l'utilisateur, renvoie true s'il s'agit d'une date valide (Attention aux années bissextiles)
+// bool dateIsValid(int day, int month, int year)
+// {
+//     bool result = false;
+//     //31 jours : 1 3 5 7 8 10 12
+//     if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+//     {
+//         if (day > 0 && day <= 31)
+//         {
+//             result = true;
+//         }
+//     }
+//     //30 jours : 4 6 9 11
+//     else if (month == 4 || month == 6 || month == 9 || month == 11)
+//     {
+//         if (day > 0 && day <= 30)
+//         {
+//             result = true;
+//         }
+//     }
+//     else if (month == 2)
+//     {
+//         bool isBisextil = (year % 4 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0);
+//         //isBisextil = year % 4 == 0 && (year % 100 != 0 || (year % 100 == 0 && year % 400 == 0));
 
+//         //29 jours : 2 && bs
+//         if (isBisextil && day == 29)
+//         {
+//             result = true;
+//         }
+//         //28 jours : 2 && !bs
+//         if (!isBisextil && day == 28)
+//         {
+//             result = true;
+//         }
+
+//     }
+
+//     return result;
+// }
+
+// dateIsValid(20, 13, 2020);
 
 
 
 
 //Exo 26 : écrire une fonction qui renvoie true si son premier argument est divisible par le second
 
+int number1 = Convert.ToInt32(Console.ReadLine);
+int diviser = Convert.ToInt32(Console.ReadLine);
 
+bool isDivisible(int number1, int diviser)
+{
+
+    if (diviser == 0)
+    {
+
+        return false;
+    }
+
+    bool resultat = number1 % diviser == 0;
+
+    return resultat;
+
+}
+ isDivisible(number1,diviser);
 
 
 
@@ -431,3 +532,4 @@ foreach (int value in tab){
 //si le nombre saisi est 60 ses diviseurs sont 2,3,4,5,6 et 10
 //si le nombre saisi est 18, ses diviseurs sont 2,3,6,9
 //si le nombre saisi est 13, il n’y a aucun diviseur
+
