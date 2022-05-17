@@ -505,26 +505,26 @@
 
 
 //Exo 26 : écrire une fonction qui renvoie true si son premier argument est divisible par le second
+// Console.WriteLine("Saisir un nombre");
+// int number1 = Convert.ToInt32(Console.ReadLine);
+// Console.WriteLine("Saisir un diviseur");
+// int diviser = Convert.ToInt32(Console.ReadLine);
 
-int number1 = Convert.ToInt32(Console.ReadLine);
-int diviser = Convert.ToInt32(Console.ReadLine);
+// bool isDivisible(int number1, int diviser)
+// {
 
-bool isDivisible(int number1, int diviser)
-{
+//     if (diviser == 0)
+//     {
 
-    if (diviser == 0)
-    {
+//         return false;
+//     }
 
-        return false;
-    }
+//     bool resultat = number1 % diviser == 0;
 
-    bool resultat = number1 % diviser == 0;
+//     return resultat;
 
-    return resultat;
-
-}
- isDivisible(number1,diviser);
-
+//}
+// bool resultat =isDivisible(); //faux (527)
 
 
 //Exo 27 : écrire un algorithme qui demande un nombre à l’utilisateur et qui indique quels sont ses diviseurs compris entre 2 et 10
@@ -533,3 +533,67 @@ bool isDivisible(int number1, int diviser)
 //si le nombre saisi est 18, ses diviseurs sont 2,3,6,9
 //si le nombre saisi est 13, il n’y a aucun diviseur
 
+//(echec)
+
+// int number = 0;
+
+
+//  bool isDivisible(int number1, int diviser)
+// {
+//     bool result = false;
+
+//     if(diviser == 2 || diviser == 3 || diviser == 4 || diviser == 5 || diviser == 5 || diviser == 6 || diviser == 7 || diviser == 8 || diviser == 9 || diviser == 10);
+//         else if (number1%diviser ==0);
+
+//     result = true;
+//     return result;
+// }
+
+//Exo 28 : Créer une méthode (fonction) qui renvoie (return) le plus petit nombre parmis ses 2 paramètres de type entier
+
+// int PlusPetit(int nombre1, int nombre2){
+
+//     if (nombre1<nombre2){
+
+//         return nombre1;
+//     }
+    
+//     else{
+//         return nombre2;
+//     }
+
+// }
+// Console.WriteLine ("Saisir nombre 1");
+
+// int nombre1 =Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine ("Saisir nombre 2");
+// int nombre2 =Convert.ToInt32(Console.ReadLine());
+
+// int mini = PlusPetit(nombre1, nombre2);
+// Console.WriteLine ($"Le nombre mini est {mini}");
+
+
+//Exo 29 : Créez une méthode RepeatString qui prend en paramètres str de type string et n de type int et qui écrit dans la console n fois str
+
+void ReapeatString(string str, int n){
+    for( int i =0; i<= n; i++){
+   Console.WriteLine(str + "");
+    };
+   
+}
+
+
+ReapeatString("poires",20);
+
+//Exo 30 : Créez une méthode FindNthDigit qui prend un nombre et un index comme paramètres et écrit dans la console le N-ème chiffre du nombre 
+//(en comptant de droite à gauche et en commençant par 0)
+
+
+
+//Exo 31 : Écrivez une méthode Letterize(int number), qui lit un entier et l'écrire dans la console en mots en français selon les conditions ci-dessous :
+//Écrivez en toutes lettres les centaines, les dizaines et les unités (et l'éventuel moins) en français.
+//Si le nombre est supérieur à 999 , vous devez écrire dans la console " trop ​​grand ".
+//Si le nombre est inférieur à -999 , vous devez écrire dans la console " trop ​​petit ".
+//Si le nombre est négatif , vous devez écrire dans la console " moins " avant.
+//Si le numéro n'est pas composé de trois chiffres, vous ne devez pas l'écrire dans la console.
