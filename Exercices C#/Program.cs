@@ -557,7 +557,7 @@
 
 //         return nombre1;
 //     }
-    
+
 //     else{
 //         return nombre2;
 //     }
@@ -576,24 +576,109 @@
 
 //Exo 29 : Créez une méthode RepeatString qui prend en paramètres str de type string et n de type int et qui écrit dans la console n fois str
 
-void ReapeatString(string str, int n){
-    for( int i =0; i<= n; i++){
-   Console.WriteLine(str + "");
-    };
-   
-}
+// void ReapeatString(string str, int n){
+//     for( int i =0; i<= n; i++){
+//    Console.WriteLine(str + "");
+//     };
+
+// }
 
 
-ReapeatString("poires",20);
+// ReapeatString("poires",20);
 
 //Exo 30 : Créez une méthode FindNthDigit qui prend un nombre et un index comme paramètres et écrit dans la console le N-ème chiffre du nombre 
 //(en comptant de droite à gauche et en commençant par 0)
 
+// void FindNthDigit(int nombre, int index){
+//     try{
+// string nombreStr = nombre + ""; //converti int to string
+// int length = nombreStr.Length;
+// int indice = length - index -1; // taille tableau - index - 1
+// char result = nombreStr[indice]; //[] tableau
+// Console.WriteLine(result);   
+//     }
+// catch  (SystemException){
+// Console.WriteLine("Autodestruction activée"); //blague
 
+// }  
 
+// }
+// FindNthDigit(12345,2);
 //Exo 31 : Écrivez une méthode Letterize(int number), qui lit un entier et l'écrire dans la console en mots en français selon les conditions ci-dessous :
 //Écrivez en toutes lettres les centaines, les dizaines et les unités (et l'éventuel moins) en français.
 //Si le nombre est supérieur à 999 , vous devez écrire dans la console " trop ​​grand ".
 //Si le nombre est inférieur à -999 , vous devez écrire dans la console " trop ​​petit ".
 //Si le nombre est négatif , vous devez écrire dans la console " moins " avant.
 //Si le numéro n'est pas composé de trois chiffres, vous ne devez pas l'écrire dans la console.
+
+// Exo 32 : Écrire un algo qui demande à l’utilisateur de saisir un nombre entier, afficher un message d’erreur si ce qui est saisi n’est pas un nombre entier.
+// try {
+
+
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Good");
+// }
+// catch(SystemException){
+// Console.WriteLine("Fatal error");
+
+// }
+
+
+
+
+
+// Exo 33 : Écrire un algo qui demande à l’utilisateur de saisir une note (nombre compris entre 0 et 20), si la saisie n’est pas valide l’indiquer à l’utilisateur
+
+// try
+// {
+//     int number = Convert.ToInt32(Console.ReadLine());
+//     if (number >= 0 && number <= 20)
+//     {
+//         Console.WriteLine("ok");
+//     }
+//     else
+//     {
+//         Console.WriteLine(" pas ok");
+//     }
+// }
+// catch (System.Exception)
+// {
+
+//     Console.WriteLine("Fatal error");
+// }
+
+
+
+// Exo 34 : Écrire un algo qui demande à l’utilisateur de saisir une note (nombre compris entre 0 et 20), tant que la saisie n’est pas valide l’indiquer à l’utilisateur et lui demander de saisir à nouveau une note
+
+try
+{
+    int number = Convert.ToInt32(Console.ReadLine());
+    if (number >= 0 && number <= 20)
+    {
+        Console.WriteLine("ok");
+    }
+    else
+    {
+       while(true)
+       Console.WriteLine("pas ok ! saississez un autre chiffre");
+    number = Convert.ToInt32(Console.ReadLine());
+    }
+}
+catch (System.Exception)
+{
+
+    Console.WriteLine("Fatal error");
+}
+
+// Exo 35 :
+
+// 1. Écrire un algo qui permet de saisir les notes d’un élève pour en calculer la moyenne (Attention au contrôle de saisie)
+// On commence par demander à l’utilisateur combien de notes il souhaite saisir.
+// Puis on calcule et on affiche la moyenne une fois toutes la saisie effectuée.
+
+// 2. Compléter l’algorithme précédent en affichant la note maxi et la note mini.
+
+// 3. Modifier l’algorithme précédent en supprimant l’étape “demander à l’utilisateur combien de notes il souhaite saisir” 
+// La saisie des notes continuera tant que l’utilisateur ne saisit pas la lettre m pour exécuter le calcul de la moyenne, il faudra également afficher le nombre de notes saisies, le min et le max.
