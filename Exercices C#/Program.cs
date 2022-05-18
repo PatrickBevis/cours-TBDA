@@ -808,7 +808,9 @@ int[] seven(int i1, int i2, int i3, int i4, int i5, int i6, int i7){
 double sumOfArray(double []tab){
 
     double result =0;
+    
 }
+return result;
 
 //Exo 40 : Écrire un algorithme plaçant dans un tableau int[] Tab; les valeurs 1, 2, . . . , 10
 
@@ -820,3 +822,9 @@ double sumOfArray(double []tab){
 
 // Exo 42 : Écrire un programme demandant à l'utilisateur de saisir une valeur numérique positive n et affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0
 // (Avec les 3 boucles : while, do … while, for)
+
+//Exo 43 : Écrivez une fonction calculant la somme des nombres entiers compris entre 1 et un entier passé en paramètre
+// ex: 
+// pour 5 la fonction renverra 15 (1+2+3+4+5)
+// pour 6 la fonction renverra 21 (1+2+3+4+5+6)
+// Exo 44 : Écrivez une fonction calculant la factorielle d’un nombre entier positif passé en paramètre
