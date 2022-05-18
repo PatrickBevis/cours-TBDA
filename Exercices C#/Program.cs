@@ -794,10 +794,10 @@
 // Exo 38
 // Écrire une fonction qui permet de créer et remplir un tableau de 7 valeurs numériques entières passées en paramètres
 
-int[] seven(int i1, int i2, int i3, int i4, int i5, int i6, int i7){
-    int[]reponse =  new int[7] {i1, i2, i3, i4, i5, i6, i7};
-    return reponse;
-}
+// int[] seven(int i1, int i2, int i3, int i4, int i5, int i6, int i7){
+//     int[]reponse =  new int[7] {i1, i2, i3, i4, i5, i6, i7};
+//     return reponse;
+// }
 
 
 
@@ -808,7 +808,7 @@ int[] seven(int i1, int i2, int i3, int i4, int i5, int i6, int i7){
 double sumOfArray(double []tab){
 
     double result =0;
-    
+
 }
 return result;
 
