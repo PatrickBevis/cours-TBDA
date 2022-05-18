@@ -625,9 +625,6 @@
 // }
 
 
-
-
-
 // Exo 33 : Écrire un algo qui demande à l’utilisateur de saisir une note (nombre compris entre 0 et 20), si la saisie n’est pas valide l’indiquer à l’utilisateur
 
 // try
@@ -651,19 +648,26 @@
 
 
 // Exo 34 : Écrire un algo qui demande à l’utilisateur de saisir une note (nombre compris entre 0 et 20), tant que la saisie n’est pas valide l’indiquer à l’utilisateur et lui demander de saisir à nouveau une note
-
+Console.WriteLine("Saisir note");
 try
 {
-    int number = Convert.ToInt32(Console.ReadLine());
-    if (number >= 0 && number <= 20)
+    int note = Convert.ToInt32(Console.ReadLine());
+    if (note >= 0 && note <= 20)
     {
-        Console.WriteLine("ok");
+        Console.WriteLine($"{note}/20");
     }
     else
     {
-       while(true)
-       Console.WriteLine("pas ok ! saississez un autre chiffre");
-    number = Convert.ToInt32(Console.ReadLine());
+        while (true)
+        {
+            Console.WriteLine("pas ok ! saississez un autre chiffre");
+           // note = Convert.ToInt32(Console.ReadLine());
+            if (note >= 0 && note <= 20)
+            {
+                Console.WriteLine($"{note}/20");
+                break;
+            }
+        }
     }
 }
 catch (System.Exception)
@@ -671,14 +675,40 @@ catch (System.Exception)
 
     Console.WriteLine("Fatal error");
 }
-
+//autre solution
 // Exo 35 :
 
 // 1. Écrire un algo qui permet de saisir les notes d’un élève pour en calculer la moyenne (Attention au contrôle de saisie)
 // On commence par demander à l’utilisateur combien de notes il souhaite saisir.
 // Puis on calcule et on affiche la moyenne une fois toutes la saisie effectuée.
 
+Console.WriteLine("Combien de notes");
+string input = Console.ReadLine();
+int nbNotes;
+bool test = int.TryParse(input, out nbNotes);
+while(test || nbNotes < 1){
+    Console.WriteLine("Combien de notes");
+    input = Console.ReadLine();
+    test = int.TryParse(input, out nbNotes);
+
+}
+int nbInput = 0;
+double sommeDesNotes = 0;
+while(nbInput < nbNotes){
+Console.WriteLine("Saisir une note entre 0 et 20");
+input = Console.ReadLine();
+double noteSaisie;
+test = double.TryParse(input, out noteSaisie);
+if(test || noteSaisie<=0 ||noteSaisie>=20){
+continue;
+}
+nbInput++;
+sommeDesNotes += noteSaisie;
+}
+double moyenne = sommeDesNotes/nbInput;
+Console.WriteLine($"La moyenne des {nbInput} notes saisies est {moyenne}");
 // 2. Compléter l’algorithme précédent en affichant la note maxi et la note mini.
 
 // 3. Modifier l’algorithme précédent en supprimant l’étape “demander à l’utilisateur combien de notes il souhaite saisir” 
 // La saisie des notes continuera tant que l’utilisateur ne saisit pas la lettre m pour exécuter le calcul de la moyenne, il faudra également afficher le nombre de notes saisies, le min et le max.
+
