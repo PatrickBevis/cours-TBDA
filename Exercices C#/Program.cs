@@ -648,67 +648,175 @@
 
 
 // Exo 34 : Écrire un algo qui demande à l’utilisateur de saisir une note (nombre compris entre 0 et 20), tant que la saisie n’est pas valide l’indiquer à l’utilisateur et lui demander de saisir à nouveau une note
-Console.WriteLine("Saisir note");
-try
-{
-    int note = Convert.ToInt32(Console.ReadLine());
-    if (note >= 0 && note <= 20)
-    {
-        Console.WriteLine($"{note}/20");
-    }
-    else
-    {
-        while (true)
-        {
-            Console.WriteLine("pas ok ! saississez un autre chiffre");
-           // note = Convert.ToInt32(Console.ReadLine());
-            if (note >= 0 && note <= 20)
-            {
-                Console.WriteLine($"{note}/20");
-                break;
-            }
-        }
-    }
-}
-catch (System.Exception)
-{
+// Console.WriteLine("Saisir note");
+// try
+// {
+//     int note = Convert.ToInt32(Console.ReadLine());
+//     if (note >= 0 && note <= 20)
+//     {
+//         Console.WriteLine($"{note}/20");
+//     }
+//     else
+//     {
+//         while (true)
+//         {
+//             Console.WriteLine("pas ok ! saississez un autre chiffre");
+//            // note = Convert.ToInt32(Console.ReadLine());
+//             if (note >= 0 && note <= 20)
+//             {
+//                 Console.WriteLine($"{note}/20");
+//                 break;
+//             }
+//         }
+//     }
+// }
+// catch (System.Exception)
+// {
 
-    Console.WriteLine("Fatal error");
-}
-//autre solution
-// Exo 35 :
+//     Console.WriteLine("Fatal error");
+// }
+// //autre solution
+// // Exo 35 :
 
-// 1. Écrire un algo qui permet de saisir les notes d’un élève pour en calculer la moyenne (Attention au contrôle de saisie)
-// On commence par demander à l’utilisateur combien de notes il souhaite saisir.
-// Puis on calcule et on affiche la moyenne une fois toutes la saisie effectuée.
+// // 1. Écrire un algo qui permet de saisir les notes d’un élève pour en calculer la moyenne (Attention au contrôle de saisie)
+// // On commence par demander à l’utilisateur combien de notes il souhaite saisir.
+// // Puis on calcule et on affiche la moyenne une fois toutes la saisie effectuée.
 
-Console.WriteLine("Combien de notes");
-string input = Console.ReadLine();
-int nbNotes;
-bool test = int.TryParse(input, out nbNotes);
-while(test || nbNotes < 1){
-    Console.WriteLine("Combien de notes");
-    input = Console.ReadLine();
-    test = int.TryParse(input, out nbNotes);
+// Console.WriteLine("Combien de notes");
+// string input = Console.ReadLine();
+// int nbNotes;
+// bool test = int.TryParse(input, out nbNotes);
+// while(test || nbNotes < 1){
+//     Console.WriteLine("Combien de notes");
+//     input = Console.ReadLine();
+//     test = int.TryParse(input, out nbNotes);
 
-}
-int nbInput = 0;
-double sommeDesNotes = 0;
-while(nbInput < nbNotes){
-Console.WriteLine("Saisir une note entre 0 et 20");
-input = Console.ReadLine();
-double noteSaisie;
-test = double.TryParse(input, out noteSaisie);
-if(test || noteSaisie<=0 ||noteSaisie>=20){
-continue;
-}
-nbInput++;
-sommeDesNotes += noteSaisie;
-}
-double moyenne = sommeDesNotes/nbInput;
-Console.WriteLine($"La moyenne des {nbInput} notes saisies est {moyenne}");
+// }
+// int nbInput = 0;
+// double sommeDesNotes = 0;
+// while(nbInput < nbNotes){
+// Console.WriteLine("Saisir une note entre 0 et 20");
+// input = Console.ReadLine();
+// double noteSaisie;
+// test = double.TryParse(input, out noteSaisie);
+// if(test || noteSaisie<=0 ||noteSaisie>=20){
+// continue;
+// }
+// nbInput++;
+// sommeDesNotes += noteSaisie;
+// }
+// double moyenne = sommeDesNotes/nbInput;
+// Console.WriteLine($"La moyenne des {nbInput} notes saisies est {moyenne}");
 // 2. Compléter l’algorithme précédent en affichant la note maxi et la note mini.
+
+//Console.WriteLine("Combien de notes ?");
+// string input = Console.ReadLine();
+// int nbNotes;
+// bool test = int.TryParse(input, out nbNotes);
+// while(!test || nbNotes < 1){
+//     Console.WriteLine("Combien de notes ?");
+//     input = Console.ReadLine();
+//     test = int.TryParse(input, out nbNotes);
+// }
+// int nbInputs = 0;
+// double sommeDesNotes = 0;
+// double min = 20;
+// double max = 0;
+// while(nbInputs < nbNotes){
+//     Console.WriteLine("Saisir une note entre 0 et 20 SVP.");
+//     input = Console.ReadLine();
+//     double noteSaisie;
+//     test = double.TryParse(input, out noteSaisie);
+//     if(!test || noteSaisie < 0 || noteSaisie > 20){
+//         Console.WriteLine("Boulet !");
+//         continue;
+//     }
+//     nbInputs++;
+//     sommeDesNotes += noteSaisie;
+//     if(noteSaisie < min){
+//         min = noteSaisie;
+//     }
+//     if(noteSaisie > max){
+//         max = noteSaisie;
+//     }
+// }
+// double moy = sommeDesNotes / nbInputs;
+// Console.WriteLine("La moyenne des " + nbInputs + " note(s) saisie(s) est : " + moy);
+// Console.WriteLine("La note minimale est : " + min + " et la note maximale est : " + max);
 
 // 3. Modifier l’algorithme précédent en supprimant l’étape “demander à l’utilisateur combien de notes il souhaite saisir” 
 // La saisie des notes continuera tant que l’utilisateur ne saisit pas la lettre m pour exécuter le calcul de la moyenne, il faudra également afficher le nombre de notes saisies, le min et le max.
 
+// int nbInputs = 0;
+// double sommeDesNotes = 0;
+// double min = 20;
+// double max = 0;
+// string input;
+// double noteSaisie = 0;
+// bool test = false;
+// Console.WriteLine("Saisir vos notes entre 0 et 20 SVP. Tapez 'm' pour valider ...");
+// while(true){
+//     Console.WriteLine("Saisir une note entre 0 et 20 SVP.");
+//     input = Console.ReadLine();
+//     test = double.TryParse(input, out noteSaisie);
+//     if(test && noteSaisie >= 0 && noteSaisie <= 20){
+//         nbInputs++;
+//         sommeDesNotes += noteSaisie;
+//         if(noteSaisie < min){
+//             min = noteSaisie;
+//         }
+//         if(noteSaisie > max){
+//             max = noteSaisie;
+//         }
+//     }
+//     if(input == "m"){
+//         break;
+//     }
+// }
+// double moy = sommeDesNotes / nbInputs;
+// Console.WriteLine("La moyenne des " + nbInputs + " note(s) saisie(s) est : " + moy);
+// Console.WriteLine("La note minimale est : " + min + " et la note maximale est : " + max);
+
+
+// Exo 36
+// Écrire une fonction qui initialise un tableau de n valeurs de type int
+// int[] JeReussiMonTableau(int nb){
+//     return new int[nb];
+// }
+// int[] tab = JeReussiMonTableau(8);
+
+// Exo 37
+// Écrire le code nécessaire pour déclarer et remplir un tableau contenant les six voyelles de l’alphabet latin
+
+
+//string[] voyelles = new string[]{"a","e","i","o","u","y"};
+
+// Exo 38
+// Écrire une fonction qui permet de créer et remplir un tableau de 7 valeurs numériques entières passées en paramètres
+
+int[] seven(int i1, int i2, int i3, int i4, int i5, int i6, int i7){
+    int[]reponse =  new int[7] {i1, i2, i3, i4, i5, i6, i7};
+    return reponse;
+}
+
+
+
+
+// Exo 39
+// Ecrivez un algorithme calculant la somme des valeurs d’un tableau
+
+double sumOfArray(double []tab){
+
+    double result =0;
+}
+
+//Exo 40 : Écrire un algorithme plaçant dans un tableau int[] Tab; les valeurs 1, 2, . . . , 10
+
+// Exo 41 : écrire une fonction permettant de savoir si un élément est présent dans un tableau de string
+// ex :
+// Le tableau contient A, E, I, O, U, Y
+// Si l’élément recherché est A la fonction renvoie true
+// Si l’élément recherché est B la fonction renvoie false
+
+// Exo 42 : Écrire un programme demandant à l'utilisateur de saisir une valeur numérique positive n et affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0
+// (Avec les 3 boucles : while, do … while, for)
