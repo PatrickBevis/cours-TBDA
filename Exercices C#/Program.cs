@@ -805,14 +805,18 @@
 // Exo 39
 // Ecrivez un algorithme calculant la somme des valeurs d’un tableau
 
-double sumOfArray(double []tab){
+// double sumOfArray(double []tab){
+//     double sum =0;
 
-    double result =0;
+// for(int i=0;i<tab.Length;i++){
 
-}
-return result;
-
+// sum += tab[i];
+// }
+// return sum;
+// }
 //Exo 40 : Écrire un algorithme plaçant dans un tableau int[] Tab; les valeurs 1, 2, . . . , 10
+
+
 
 // Exo 41 : écrire une fonction permettant de savoir si un élément est présent dans un tableau de string
 // ex :
@@ -820,11 +824,22 @@ return result;
 // Si l’élément recherché est A la fonction renvoie true
 // Si l’élément recherché est B la fonction renvoie false
 
+
+
 // Exo 42 : Écrire un programme demandant à l'utilisateur de saisir une valeur numérique positive n et affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0
 // (Avec les 3 boucles : while, do … while, for)
+
+
 
 //Exo 43 : Écrivez une fonction calculant la somme des nombres entiers compris entre 1 et un entier passé en paramètre
 // ex: 
 // pour 5 la fonction renverra 15 (1+2+3+4+5)
 // pour 6 la fonction renverra 21 (1+2+3+4+5+6)
+
+
+
 // Exo 44 : Écrivez une fonction calculant la factorielle d’un nombre entier positif passé en paramètre
+
+
+
+//Exo 45 : essayer de refaire l'exo 35 en utilisant les tableaux (pour la partie 1 et 2 de l'exercice)
