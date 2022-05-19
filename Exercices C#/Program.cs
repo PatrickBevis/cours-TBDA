@@ -805,15 +805,15 @@
 // Exo 39
 // Ecrivez un algorithme calculant la somme des valeurs d’un tableau
 
-// double sumOfArray(double []tab){
-//     double sum =0;
+double sumOfArray(double []tab){
+    double sum =0;
 
-// for(int i=0;i<tab.Length;i++){
+for(int i=0;i<tab.Length;i++){
 
-// sum += tab[i];
-// }
-// return sum;
-// }
+sum += tab[i];
+}
+return sum;
+}
 //Exo 40 : Écrire un algorithme plaçant dans un tableau int[] Tab; les valeurs 1, 2, . . . , 10
 
 
