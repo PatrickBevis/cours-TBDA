@@ -818,6 +818,7 @@
 
 
 
+
 // Exo 41 : écrire une fonction permettant de savoir si un élément est présent dans un tableau de string
 // ex :
 // Le tableau contient A, E, I, O, U, Y
