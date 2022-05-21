@@ -147,7 +147,7 @@
 // }
 
 
-
+//12
 
 
 
@@ -814,7 +814,29 @@
 // }
 // return sum;
 // }
+// int SumOfIntegerArray(int[]tab){
+// int somme =0;
+
+// for(int i =0; i<tab.Length;i++){
+// int elementCourant = tab[i];
+// somme += elementCourant;
+// }
+
+
+
+
+// return somme;
+
+// }
+// int[]tableauTest = new int[]{2,3,4,5,2};
+// int result = SumOfIntegerArray(tableauTest);
+
+// Console.WriteLine(result);
 //Exo 40 : Écrire un algorithme plaçant dans un tableau int[] Tab; les valeurs 1, 2, . . . , 10
+
+//int[] tab = new int[]{1,2,3,4,5,6,7,8,9,10};
+
+
 
 
 
@@ -824,6 +846,37 @@
 // Le tableau contient A, E, I, O, U, Y
 // Si l’élément recherché est A la fonction renvoie true
 // Si l’élément recherché est B la fonction renvoie false
+
+bool findElmement(string[]tab, string search){
+    bool result= false;
+for (int i = 0; i < tab.Length; i++)
+{
+    string elementCourant = tab[i];
+    if(result == elementCourant){
+        result= true;
+        break;
+    }
+}
+    return result;
+
+
+}
+//Alternative
+
+// bool findElmement(string[]tab, string search){
+// for (int i = 0; i < tab.Length; i++)
+// {
+//     string elementCourant = tab[i];
+//     if(elementCourant == search){
+//         return true;
+       
+//     }
+// }
+//     return false;
+
+
+// }
+
 
 
 
