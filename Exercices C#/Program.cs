@@ -847,20 +847,20 @@
 // Si l’élément recherché est A la fonction renvoie true
 // Si l’élément recherché est B la fonction renvoie false
 
-bool findElmement(string[]tab, string search){
-    bool result= false;
-for (int i = 0; i < tab.Length; i++)
-{
-    string elementCourant = tab[i];
-    if(result == elementCourant){
-        result= true;
-        break;
-    }
-}
-    return result;
+// bool findElmement(string[]tab, string search){
+//     bool result= false;
+// for (int i = 0; i < tab.Length; i++)
+// {
+//     string elementCourant = tab[i];
+//     if(search == elementCourant){
+//         result= true;
+//         break;
+//     }
+// }
+//     return result;
 
 
-}
+// }
 //Alternative
 
 // bool findElmement(string[]tab, string search){
@@ -883,12 +883,69 @@ for (int i = 0; i < tab.Length; i++)
 // Exo 42 : Écrire un programme demandant à l'utilisateur de saisir une valeur numérique positive n et affichant toutes les valeurs n, n − 1, . . . , 2, 1, 0
 // (Avec les 3 boucles : while, do … while, for)
 
+// Console.Writeline("Saisir un entier positif");
+// int nb =0;
+// string input =Console.Readline();
+// bool result = uint.TryParse(input, out nb); //"u" est forcement positif
+// while(!result){
+//     Console.Writeline("Saisir un entier positif");
+//     input =Console.Readline();
+// result = uint.TryParse(input, out nb);
+// }
+// //Version While
+// while(n > 0){
+//     Console.WriteLine(n--);
+//     //n--;
+// }
+// Console.WriteLine(n);
 
+// //Version Do While
 
+// do{
+
+//     Console.WriteLine(n--);
+// }
+// while(n>0);
+// Console.WriteLine(n);
+
+// // for 1
+
+// for (int i = 0; i >=0 ;i++){
+//     Console.WriteLine(n-i);
+// }
+
+// // for 2
+
+// for  (uInt i = n; 1>0;i--){
+
+//     Console.WriteLine(i);
+//     if(i==0){
+//         break;
+//     }
+// }
 //Exo 43 : Écrivez une fonction calculant la somme des nombres entiers compris entre 1 et un entier passé en paramètre
 // ex: 
 // pour 5 la fonction renverra 15 (1+2+3+4+5)
 // pour 6 la fonction renverra 21 (1+2+3+4+5+6)
+Console.WriteLine("Nombre ?");
+int CalcSumInteger(int n){
+   int result =0;
+
+for( int i=1; i <= n;i++){
+    result+=i;
+}
+//While
+// int cpt = 0;
+// while(cpt <= maxi);
+// result += maxi;
+// cpt++;
+   return result;
+
+}
+int test1 =CalcSumInteger(5);
+int test2 = CalcSumInteger(6);
+
+
 
 
 
@@ -897,3 +954,78 @@ for (int i = 0; i < tab.Length; i++)
 
 
 //Exo 45 : essayer de refaire l'exo 35 en utilisant les tableaux (pour la partie 1 et 2 de l'exercice)
+
+
+
+
+
+
+//Random random = new Random();
+//string[]poker = new string[]{"2h","3h","4h","5h","6h","7h","8h","9h","10h","Jh","Qh","Kh","Ah","2d","3d","4d","5d","6d","7d","8d","9d","10d","Jd","Qd","Kd","Ad","2s","3s","4s","5s","6s","7s","8s","9s","10s","Js","Qs","Ks","As","2c","3c","4c","5c","6c","7c","8c","9c","10c","Jc","Qc","Kc","Ac"};
+
+
+
+//int cards = random.Next(poker.Length);
+
+//Console.WriteLine($" le joueur 1 a {cards}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if, else if, else, switch (cours)
+//Si les valeurs ne peuvent pas etre inférieur à 0.
+
+// int tempInCels=0;
+
+// if(tempInCels >0  && tempInCels <20){
+
+//     Console.WriteLine("Cold");
+// }
+
+// else if(tempInCels <20  && tempInCels >30){
+
+//     Console.WriteLine("Hot");
+// }
+
+// else { 
+
+//     Console.WriteLine("Very hot");
+// }
+
+// switch (tempInCels)
+// {
+//     case < 0:
+//     Console.WriteLine("cold");
+//     break;
+
+//     default:
+//     Console.WriteLine("hot");
+//     break;
+
+// }
+
