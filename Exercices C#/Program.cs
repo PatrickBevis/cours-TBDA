@@ -1008,75 +1008,75 @@
 // Partie 2 -> Complétez l’algorithme précédent en indiquant également le nombre de valeurs paires et impaires
 // Partie 3 -> Modifier l’algorithme précédent pour n’écrire dans la console que les valeurs paires et positives
 
-Console.WriteLine("Combien de valeurs dans ?");
-uint nbVal;
-string saisie = Console.ReadLine();
-bool saisieOk = uint.TryParse(saisie, out nbVal);
-while (!saisieOk)
-{
-    Console.WriteLine("Combiende valeurs? Merci de choisir un nombre");
-    saisie = Console.ReadLine();
-    saisieOk = uint.TryParse(saisie, out nbVal);
-}
-int[] tableauDeValeurs = new int[nbVal];
-for (int i = 0; i < tableauDeValeurs.Length; i++)
-{
-    Console.WriteLine($"Saisir la valeur{i + 1}");
-    int currentNumber;
-    saisie = Console.ReadLine();
-    saisieOk = int.TryParse(saisie, out currentNumber);
-    while (!saisieOk)
-    {
-        Console.WriteLine($"Saisir la valeur{i + 1}, un nb entier");
-        saisie = Console.ReadLine();
-        saisieOk = uint.TryParse(saisie, out nbVal);
-    }
-    tableauDeValeurs[i] = currentNumber;
-}
-int nbValeursPositives = 0;
-int nbValeursPaires = 0;
-int nbValeursImpaires = 0;
-for (int i = 0; i < tableauDeValeurs.Length; i++)
-{
-    if (tableauDeValeurs[i] >= 0)
-    {
-        nbValeursPositives++;
+// Console.WriteLine("Combien de valeurs dans ?");
+// uint nbVal;
+// string saisie = Console.ReadLine();
+// bool saisieOk = uint.TryParse(saisie, out nbVal);
+// while (!saisieOk)
+// {
+//     Console.WriteLine("Combiende valeurs? Merci de choisir un nombre");
+//     saisie = Console.ReadLine();
+//     saisieOk = uint.TryParse(saisie, out nbVal);
+// }
+// int[] tableauDeValeurs = new int[nbVal];
+// for (int i = 0; i < tableauDeValeurs.Length; i++)
+// {
+//     Console.WriteLine($"Saisir la valeur{i + 1}");
+//     int currentNumber;
+//     saisie = Console.ReadLine();
+//     saisieOk = int.TryParse(saisie, out currentNumber);
+//     while (!saisieOk)
+//     {
+//         Console.WriteLine($"Saisir la valeur{i + 1}, un nb entier");
+//         saisie = Console.ReadLine();
+//         saisieOk = uint.TryParse(saisie, out nbVal);
+//     }
+//     tableauDeValeurs[i] = currentNumber;
+// }
+// int nbValeursPositives = 0;
+// int nbValeursPaires = 0;
+// int nbValeursImpaires = 0;
+// for (int i = 0; i < tableauDeValeurs.Length; i++)
+// {
+//     if (tableauDeValeurs[i] >= 0)
+//     {
+//         nbValeursPositives++;
 
-    }
+//     }
 
-    if (tableauDeValeurs[i] % 2 == 0)
-    {
+//     if (tableauDeValeurs[i] % 2 == 0)
+//     {
 
-        nbValeursPaires++;
-    }
-    else
-    {
-        nbValeursImpaires++;
-    }
+//         nbValeursPaires++;
+//     }
+//     else
+//     {
+//         nbValeursImpaires++;
+//     }
 
-    if (tableauDeValeurs[i] >= 0 && tableauDeValeurs[i] % 2 == 0){
-       Console.WriteLine("Le nombre " +tableauDeValeurs[i]+ "est pair et positif");
+//     if (tableauDeValeurs[i] >= 0 && tableauDeValeurs[i] % 2 == 0){
+//        Console.WriteLine("Le nombre " +tableauDeValeurs[i]+ "est pair et positif");
 
-    }
+//     }
 
-}
-int nbValeursNegatives = tableauDeValeurs.Length - nbValeursPositives;
+// }
+// int nbValeursNegatives = tableauDeValeurs.Length - nbValeursPositives;
 
-Console.WriteLine("Le tableau comporte " + nbValeursPositives + " valeurs positives et " + nbValeursNegatives + " valeurs négatives");
-Console.WriteLine("Le tableau comporte " + nbValeursPaires + " valeurs paires et " + nbValeursImpaires + " valeurs impaires");
-// Console.WriteLine($"Le nombre de valeurs positives est {nbValeursPositives} et le nombre de valeurs positives est{nbValeursNegatives}");
-
-
-
-
-// Exo 48 : écrire une fonction permettant de renvoyer la moyenne des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
-double CalculMoyTab(int[]tableauEntiers){
-   double result =0;
+// Console.WriteLine("Le tableau comporte " + nbValeursPositives + " valeurs positives et " + nbValeursNegatives + " valeurs négatives");
+// Console.WriteLine("Le tableau comporte " + nbValeursPaires + " valeurs paires et " + nbValeursImpaires + " valeurs impaires");
+// // Console.WriteLine($"Le nombre de valeurs positives est {nbValeursPositives} et le nombre de valeurs positives est{nbValeursNegatives}");
 
 
 
-   return result;
-}
+
+// // Exo 48 : écrire une fonction permettant de renvoyer la moyenne des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
+// double CalculMoyTab(int[]tableauEntiers){
+//    double result =0;
+
+
+
+//    return result;
+// }
 
 
 
@@ -1103,9 +1103,8 @@ double CalculMoyTab(int[]tableauEntiers){
 
 
 
-
 // Random random = new Random();
-// string[] poker = new string[] { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
+//string[] poker = new string[] { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
 
 // int cards = random.Next(poker.Length);
 // int cards2 = random.Next(poker.Length);
@@ -1127,8 +1126,6 @@ double CalculMoyTab(int[]tableauEntiers){
 // Console.WriteLine($"Le joueur 1 a {poker[cards]} et {poker[cards2]}");
 
 // Console.WriteLine($"Le  board: {poker[cards3]}, {poker[cards4]}, {poker[cards5]}, {poker[cards6]}, {poker[cards7]},");
-
-
 
 
 
