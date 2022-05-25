@@ -685,8 +685,9 @@
 // Console.WriteLine("Combien de notes");
 // string input = Console.ReadLine();
 // int nbNotes;
-// bool test = int.TryParse(input, out nbNotes);
-// while(test || nbNotes < 1){
+// bool test = int.TryParse(input, out nbNotes); // stock l'information pour savoir si ça s'est bien passé
+// while (test || nbNotes < 1)
+// {
 //     Console.WriteLine("Combien de notes");
 //     input = Console.ReadLine();
 //     test = int.TryParse(input, out nbNotes);
@@ -694,16 +695,18 @@
 // }
 // int nbInput = 0;
 // double sommeDesNotes = 0;
-// while(nbInput < nbNotes){
-// Console.WriteLine("Saisir une note entre 0 et 20");
-// input = Console.ReadLine();
-// double noteSaisie;
-// test = double.TryParse(input, out noteSaisie);
-// if(test || noteSaisie<=0 ||noteSaisie>=20){
-// continue;
-// }
-// nbInput++;
-// sommeDesNotes += noteSaisie;
+// while (nbInput < nbNotes)
+// {
+//     Console.WriteLine("Saisir une note entre 0 et 20");
+//     input = Console.ReadLine();
+//     double noteSaisie;
+//     test = double.TryParse(input, out noteSaisie);
+//     if (test || noteSaisie <= 0 || noteSaisie >= 20)
+//     {
+//         continue;
+//     }
+//     nbInput++;
+//     sommeDesNotes += noteSaisie;
 // }
 // double moyenne = sommeDesNotes/nbInput;
 // Console.WriteLine($"La moyenne des {nbInput} notes saisies est {moyenne}");
@@ -869,7 +872,7 @@
 //     string elementCourant = tab[i];
 //     if(elementCourant == search){
 //         return true;
-       
+
 //     }
 // }
 //     return false;
@@ -927,105 +930,215 @@
 // ex: 
 // pour 5 la fonction renverra 15 (1+2+3+4+5)
 // pour 6 la fonction renverra 21 (1+2+3+4+5+6)
-Console.WriteLine("Nombre ?");
-int CalcSumInteger(int n){
-   int result =0;
+// Console.WriteLine("Nombre ?");
+// int CalcSumInteger(int n){
+//    int result =0;
 
-for( int i=1; i <= n;i++){
-    result+=i;
-}
-//While
-// int cpt = 0;
-// while(cpt <= maxi);
-// result += maxi;
-// cpt++;
-   return result;
+// for( int i=1; i <= n;i++){
+//     result+=i;
+// }
+// //While
+// // int cpt = 0;
+// // while(cpt <= maxi);
+// // result += maxi;
+// // cpt++;
+//    return result;
 
-}
-int test1 =CalcSumInteger(5);
-int test2 = CalcSumInteger(6);
-
-
+// }
+// int test1 =CalcSumInteger(5);
+// int test2 = CalcSumInteger(6);
 
 
 
 // Exo 44 : Écrivez une fonction calculant la factorielle d’un nombre entier positif passé en paramètre
 
 
+// int CalcFactorielle(int n){
+//    int result =1;
+
+// for( int i=1; i <= n;i++){
+//     result*=i;
+// }
+
+//    return result;
+
+// }
+// int test3 =CalcFactorielle(5);
+// int test4 = CalcFactorielle(6);
+
+
 
 //Exo 45 : essayer de refaire l'exo 35 en utilisant les tableaux (pour la partie 1 et 2 de l'exercice)
 
+//int[] notes = new int[]{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
 
+// Exo 46 : Écrivez un algorithme constituant un nouveau tableau à partir de deux tableaux de même longueur préalablement définis. Le nouveau tableau contiendra la somme des éléments des deux tableaux de départ.
+// ex : 
+// tableau1 contient 1, 4, 17, 34, 16
+// tableau2 contient 8,7,3,12,6
+// nouveauTableau contiendra 9,11,20,46,22
+// int[] tab1 = new int[]{1,4,17,34,16};
+// int[] tab2 = new int[]{8,7,3,12,6};
 
-
-
-//Random random = new Random();
-//string[]poker = new string[]{"2h","3h","4h","5h","6h","7h","8h","9h","10h","Jh","Qh","Kh","Ah","2d","3d","4d","5d","6d","7d","8d","9d","10d","Jd","Qd","Kd","Ad","2s","3s","4s","5s","6s","7s","8s","9s","10s","Js","Qs","Ks","As","2c","3c","4c","5c","6c","7c","8c","9c","10c","Jc","Qc","Kc","Ac"};
-
-
-
-//int cards = random.Next(poker.Length);
-
-//Console.WriteLine($" le joueur 1 a {cards}");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// if, else if, else, switch (cours)
-//Si les valeurs ne peuvent pas etre inférieur à 0.
-
-// int tempInCels=0;
-
-// if(tempInCels >0  && tempInCels <20){
-
-//     Console.WriteLine("Cold");
-// }
-
-// else if(tempInCels <20  && tempInCels >30){
-
-//     Console.WriteLine("Hot");
-// }
-
-// else { 
-
-//     Console.WriteLine("Very hot");
-// }
-
-// switch (tempInCels)
+// int[] sumValues(int[]tab1,int[]tab2){
+// int[] result = new int[tab1.Length];
+// for (int i = 0; i < result.Length; i++)
 // {
-//     case < 0:
-//     Console.WriteLine("cold");
-//     break;
-
-//     default:
-//     Console.WriteLine("hot");
-//     break;
+//    result[i] = tab1[i] + tab2[i];
+// }
+// return result;
 
 // }
+// sumValues(tab1,tab2);
+
+
+//bool test =true;
+
+
+
+
+
+
+
+
+
+// Exo 47 : 
+// Partie 1 -> Écrivez un algorithme permettant à l’utilisateur de saisir un nombre quelconque de valeurs entières, qui devront être stockées dans un tableau. L’utilisateur doit donc commencer par entrer le nombre de valeurs qu’il compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le programme affichera le nombre de valeurs négatives et le nombre de valeurs positives.
+// Partie 2 -> Complétez l’algorithme précédent en indiquant également le nombre de valeurs paires et impaires
+// Partie 3 -> Modifier l’algorithme précédent pour n’écrire dans la console que les valeurs paires et positives
+
+Console.WriteLine("Combien de valeurs dans ?");
+uint nbVal;
+string saisie = Console.ReadLine();
+bool saisieOk = uint.TryParse(saisie, out nbVal);
+while (!saisieOk)
+{
+    Console.WriteLine("Combiende valeurs? Merci de choisir un nombre");
+    saisie = Console.ReadLine();
+    saisieOk = uint.TryParse(saisie, out nbVal);
+}
+int[] tableauDeValeurs = new int[nbVal];
+for (int i = 0; i < tableauDeValeurs.Length; i++)
+{
+    Console.WriteLine($"Saisir la valeur{i + 1}");
+    int currentNumber;
+    saisie = Console.ReadLine();
+    saisieOk = int.TryParse(saisie, out currentNumber);
+    while (!saisieOk)
+    {
+        Console.WriteLine($"Saisir la valeur{i + 1}, un nb entier");
+        saisie = Console.ReadLine();
+        saisieOk = uint.TryParse(saisie, out nbVal);
+    }
+    tableauDeValeurs[i] = currentNumber;
+}
+int nbValeursPositives = 0;
+int nbValeursPaires = 0;
+int nbValeursImpaires = 0;
+for (int i = 0; i < tableauDeValeurs.Length; i++)
+{
+    if (tableauDeValeurs[i] >= 0)
+    {
+        nbValeursPositives++;
+
+    }
+
+    if (tableauDeValeurs[i] % 2 == 0)
+    {
+
+        nbValeursPaires++;
+    }
+    else
+    {
+        nbValeursImpaires++;
+    }
+
+    if (tableauDeValeurs[i] >= 0 && tableauDeValeurs[i] % 2 == 0){
+       Console.WriteLine("Le nombre " +tableauDeValeurs[i]+ "est pair et positif");
+
+    }
+
+}
+int nbValeursNegatives = tableauDeValeurs.Length - nbValeursPositives;
+
+Console.WriteLine("Le tableau comporte " + nbValeursPositives + " valeurs positives et " + nbValeursNegatives + " valeurs négatives");
+Console.WriteLine("Le tableau comporte " + nbValeursPaires + " valeurs paires et " + nbValeursImpaires + " valeurs impaires");
+// Console.WriteLine($"Le nombre de valeurs positives est {nbValeursPositives} et le nombre de valeurs positives est{nbValeursNegatives}");
+
+
+
+
+// Exo 48 : écrire une fonction permettant de renvoyer la moyenne des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
+double CalculMoyTab(int[]tableauEntiers){
+   double result =0;
+
+
+
+   return result;
+}
+
+
+
+
+// Exo 49 : écrire une fonction permettant de renvoyer la valeur maximale des éléments d’un tableau d’entiers passé en paramètres  (sans utiliser de fonction prédéfinie de C# )
+
+
+
+
+
+// Exo 50 : écrire une fonction permettant de renvoyer la valeur minimale des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
+
+
+
+
+
+// Exo 51 : écrire un algorithme permettant d’afficher dans la console le min, le max, la moyenne et le nombre d’élément d’un tableau (utiliser les fonctions précédemment créées)
+
+
+
+
+
+
+
+
+
+
+// Random random = new Random();
+// string[] poker = new string[] { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
+
+// int cards = random.Next(poker.Length);
+// int cards2 = random.Next(poker.Length);
+// int cards3 = random.Next(poker.Length);
+// int cards4 = random.Next(poker.Length);
+// int cards5 = random.Next(poker.Length);
+// int cards6 = random.Next(poker.Length);
+// int cards7 = random.Next(poker.Length);
+
+// List<string> joueur = new List<string>();
+// joueur.Add("joueur1");
+// joueur.Add("joueur2");
+// joueur.Add("joueur3");
+// joueur.Add("joueur4");
+
+// Console.WriteLine("Ajouter un joueur");
+// Console.ReadLine(joueur);
+
+// Console.WriteLine($"Le joueur 1 a {poker[cards]} et {poker[cards2]}");
+
+// Console.WriteLine($"Le  board: {poker[cards3]}, {poker[cards4]}, {poker[cards5]}, {poker[cards6]}, {poker[cards7]},");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
