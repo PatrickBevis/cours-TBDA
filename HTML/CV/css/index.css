@@ -25,7 +25,9 @@ body{
   font-size: 20px;
 }
 
-
+.bg{
+  background-color: rgb(201, 201, 201);
+}
 
 
 
@@ -51,10 +53,25 @@ body{
   margin: 10px;
 }
 
-.margin-20{
-  margin:40px;
+.margin-15{
+  margin: 15px;
 }
 
+.margin-20{
+  margin:20px;
+}
+
+.margin-30{
+  margin:30px;
+}
+
+.mr-30{
+  margin-right: 30px;
+}
+
+.ml-30{
+  margin-left: 30px;
+}
 
 .pt-0{
   padding-top: 0px;
@@ -63,7 +80,6 @@ body{
 .list-type{
   list-style-type: none;
 }
-
 
 /*color*/
 
@@ -98,14 +114,14 @@ body{
   background: url(../img/bg-bleu.jpg);
   position: relative;
     overflow: hidden;
-    border-radius: 40px;
+    
     height: 360px;
 }
 
 /*image*/
 .img-avatar{
-  width: 175px;
-  height: 175px;
+  width: 155px;
+  height: 155px;
   margin-top: 15px;
   
 }
@@ -131,20 +147,57 @@ body{
 
 .button-header1:hover{
 
-  border:1px solid ;
+  border:1px solid white;
   padding: 10px;
   background-color: red;
-  color: white;
+  color: white !important;
   font-weight: bold ;
+
 }
 
 /*border*/
 
 .border-block{
-
   border:  1px solid black;
   overflow: hidden;
   box-shadow: 10px 5px 5px, black;
   margin-top: 50px;
+  box-shadow: 10px 5px 5px black!important;
+}
+
+.border-block:hover{
+  border:  1px solid black;
+  overflow: hidden;
+  box-shadow: 10px 5px 5px, black;
+  margin-top: 50px;
+  box-shadow: 10px 5px 5px #38AFE6!important;
+}
+
+.br-40{
   border-radius: 40px;
+}
+
+.br-10{
+  border-radius: 10px;
+}
+
+.l-block{
+  float: left;
+    width: 40%;
+    text-align: justify;
+}
+
+.r-block{
+  float: right;
+    width: 40%;
+    text-align: justify;
+
+}
+
+.position-fixed{
+
+  position: fixed;
+  top:0;
+  width: 100%;
+  padding-top: 102px;
 }
