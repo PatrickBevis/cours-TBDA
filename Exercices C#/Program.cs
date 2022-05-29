@@ -1069,9 +1069,15 @@
 
 
 
-// // Exo 48 : écrire une fonction permettant de renvoyer la moyenne des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
+// Exo 48 : écrire une fonction permettant de renvoyer la moyenne des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
 // double CalculMoyTab(int[]tableauEntiers){
 //    double result =0;
+   
+
+//     for (int i = 0; i < tableauEntiers.Length; i++)
+//     {
+//         result= tableauEntiers[i]/i;
+//     }
 
 
 
@@ -1083,13 +1089,36 @@
 
 // Exo 49 : écrire une fonction permettant de renvoyer la valeur maximale des éléments d’un tableau d’entiers passé en paramètres  (sans utiliser de fonction prédéfinie de C# )
 
+double ValMaxTab(int[]tab){
 
+double max = 0;
 
+for (int i = 0; i < tab.Length; i++)
+{
+    if(tab[i]>max){
+
+        max= tab[i];
+        }
+        return max;
+}
+}
 
 
 // Exo 50 : écrire une fonction permettant de renvoyer la valeur minimale des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
 
+double ValMinTab(int[]tab){
 
+double min = 0;
+
+for (int i = 0; i < tab.Length; i++)
+{
+    if(tab[i]<min){
+
+        min= tab[i];
+        }
+        return min;
+}
+}
 
 
 
@@ -1126,7 +1155,6 @@
 // Console.WriteLine($"Le joueur 1 a {poker[cards]} et {poker[cards2]}");
 
 // Console.WriteLine($"Le  board: {poker[cards3]}, {poker[cards4]}, {poker[cards5]}, {poker[cards6]}, {poker[cards7]},");
-
 
 
 
