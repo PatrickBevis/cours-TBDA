@@ -2,7 +2,7 @@
 /*------------------RESET------------------------*/
 a{
   text-decoration: none;
-  color:black;
+  color:white;
 }
 
 a:hover{
@@ -28,12 +28,11 @@ body{
 h4{
   color: grey;
   font-weight:bold;
-  font-size: 30px;
   margin:10px;
   margin-left: 30px;
 
 }
-
+ 
 
 /*display*/
 .d-flex{
@@ -69,6 +68,10 @@ h4{
   margin:30px;
 }
 
+.margin-50{
+  margin: 50px;
+}
+
 .mr-30{
   margin-right: 30px;
 }
@@ -84,6 +87,7 @@ h4{
 .list-type{
   list-style-type: none;
 }
+
 
 /*color*/
 
@@ -119,7 +123,7 @@ h4{
 
 /*background*/
 .bg-header {
-  background: url(../img/bg-bleu.jpg);
+  background-color: rgb(85, 81, 81);
   position: relative;
     overflow: hidden;
     
@@ -127,13 +131,15 @@ h4{
 }
 
 .bg{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 /*image*/
 .img-avatar{
   width: 155px;
   height: 155px;
   margin-top: 15px;
+  border-radius: 50%;
+  background-color:#126f9b;
   
 }
 
@@ -169,17 +175,16 @@ h4{
 /*border*/
 
 .border-block{
-  border:  1px solid black;
+  border:  1px solid rgb(255, 255, 255);
   overflow: hidden;
   margin-top: 50px;
-  box-shadow: 10px 5px 5px black!important;
+  background-color: grey;
+  
 }
 
 .border-block:hover{
-  border:  1px solid black;
-  overflow: hidden;
-  margin-top: 50px;
-  box-shadow: 10px 5px 5px #38AFE6!important;
+
+  box-shadow: 10px 5px 5px #38AFE6;
 }
 
 .br-40{
@@ -197,7 +202,7 @@ h4{
 }
 
 .r-block{
-  grid;
+  display:grid;
     width: 40%;
     text-align: justify;
 
