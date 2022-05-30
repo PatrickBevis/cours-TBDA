@@ -1,0 +1,28 @@
+.d-flex{
+    display: flex;
+  }
+
+.justify-between{
+    justify-content: space-between
+    ;
+  }
+
+.button{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.bg{
+    background-color: darkblue;
+}
+
+.bg:hover{
+    background-color: blue;
+}
+
+i{
+    color:white;
+    text-align: center;
+    font-size: 30px;
+}
