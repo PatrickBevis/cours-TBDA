@@ -1089,40 +1089,69 @@
 
 // Exo 49 : écrire une fonction permettant de renvoyer la valeur maximale des éléments d’un tableau d’entiers passé en paramètres  (sans utiliser de fonction prédéfinie de C# )
 
-double ValMaxTab(int[]tab){
+// double ValMaxTab(int[]tab){
 
-double max = 0;
+// double max = 0;
 
-for (int i = 0; i < tab.Length; i++)
-{
-    if(tab[i]>max){
+// for (int i = 0; i < tab.Length; i++)
+// {
+//     if(tab[i]>max){
 
-        max= tab[i];
-        }
-        return max;
-}
-}
+//         max= tab[i];
+//         }
+//         return max;
+// }
+// }
 
 
 // Exo 50 : écrire une fonction permettant de renvoyer la valeur minimale des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
 
-double ValMinTab(int[]tab){
+// double ValMinTab(int[]tab){
 
-double min = 0;
+// double min = 0;
 
-for (int i = 0; i < tab.Length; i++)
-{
-    if(tab[i]<min){
+// for (int i = 0; i < tab.Length; i++)
+// {
+//     if(tab[i]<min){
 
-        min= tab[i];
-        }
-        return min;
-}
-}
+//         min= tab[i];
+//         }
+//         return min;
+// }
+// }
 
 
 
 // Exo 51 : écrire un algorithme permettant d’afficher dans la console le min, le max, la moyenne et le nombre d’élément d’un tableau (utiliser les fonctions précédemment créées)
+
+
+
+
+// Exo 52 : écrire un algorithme qui écrit lettre par lettre le contenu d’une variable de type string
+
+
+
+
+
+
+
+
+// Exo 53 : écrire une fonction qui compte le nombre de voyelles dans un mot
+
+
+
+
+
+
+
+
+
+// Exo 54 : écrire une fonction qui compte le nombre de consonnes dans un mot
+// Exo 55 : écrire une fonction qui compte le nombre de mots dans une phrase
+// Exo 56 : écrire une fonction pour remplacer les voyelles accentuées dans un texte
+// ex : “ à é è û ï ” devient “ a e e u i ”
+// Exo 57 : écrire un programme qui génère un tirage de l’Euromillions aléatoirement
+// (5 numéros compris entre 1 et 50 et tous différents + 2 étoiles comprises entre 1 et 12 différentes l’une de l’autre)
 
 
 
