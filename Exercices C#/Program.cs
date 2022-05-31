@@ -1072,11 +1072,11 @@
 // Exo 48 : écrire une fonction permettant de renvoyer la moyenne des éléments d’un tableau d’entiers passé en paramètres (sans utiliser de fonction prédéfinie de C# )
 // double CalculMoyTab(int[]tableauEntiers){
 //    double result =0;
-   
+
 
 //     for (int i = 0; i < tableauEntiers.Length; i++)
 //     {
-//         result= tableauEntiers[i]/i;
+//         result += tableauEntiers[i]/tableauEntiers.Length;
 //     }
 
 
@@ -1089,9 +1089,9 @@
 
 // Exo 49 : écrire une fonction permettant de renvoyer la valeur maximale des éléments d’un tableau d’entiers passé en paramètres  (sans utiliser de fonction prédéfinie de C# )
 
-// double ValMaxTab(int[]tab){
+// int ValMaxTab(int[]tab){
 
-// double max = 0;
+// int max =int.MinValue;
 
 // for (int i = 0; i < tab.Length; i++)
 // {
@@ -1108,7 +1108,7 @@
 
 // double ValMinTab(int[]tab){
 
-// double min = 0;
+// double min= int.MaxValue;
 
 // for (int i = 0; i < tab.Length; i++)
 // {
@@ -1124,34 +1124,171 @@
 
 // Exo 51 : écrire un algorithme permettant d’afficher dans la console le min, le max, la moyenne et le nombre d’élément d’un tableau (utiliser les fonctions précédemment créées)
 
-
+// void writeResultInTheConsole(int[]tableauEntiers){
+// Console.WriteLine($"Valeur min : {valMinTab(tab)});
+// Console.WriteLine($"Valeur max : {valMaxTab(tab)});
+// Console.WriteLine($"Valeur moy : {CalculMoyTab(tableauEntiers)});
+// Console.WriteLine("Nb elts : " + tableauEntiers.Length);
+// }
 
 
 // Exo 52 : écrire un algorithme qui écrit lettre par lettre le contenu d’une variable de type string
 
+// void Lettre(string str){
 
-
-
-
-
-
+//     for (int i = 0; i < str.Length; i++)
+//     {
+//         Console.WriteLine(str[i]);
+//     }
+// }
+// Lettre("bonjour");
 
 // Exo 53 : écrire une fonction qui compte le nombre de voyelles dans un mot
 
+// int CounterVoyelles(string mot){
+// int voyelles=0;
+//   for(int i = 0; i < mot.Length; i++) {
+//            char c = mot[i]; 
+//            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c =='y') { 
+//                 voyelles++;
+//            }
+//   }
+
+// return voyelles
+// ;
+
+// }
+
+// Console.WriteLine($"Nbre voyelles = {CounterVoyelles("charrette")}");
+
+// // Exo 54 : écrire une fonction qui compte le nombre de consonnes dans un mot
+
+// void CounterConsonnes(string mot){
+// int consonnes=0;
+//   for(int i = 0; i < mot.Length; i++) {
+//            char c = mot[i]; 
+//            if(!(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c =='y')) { 
+//                 consonnes++;
+//            }
+//   }
+// return consonnes;
+
+
+// }
+
+// Console.WriteLine($"Nbre consonnes = {CounterConsonnes("charrette")}");
 
 
 
 
-
-
-
-
-// Exo 54 : écrire une fonction qui compte le nombre de consonnes dans un mot
 // Exo 55 : écrire une fonction qui compte le nombre de mots dans une phrase
+
+// int motsPhrases(string phrase){
+// int mots=0;
+//   for(int i = 0; i < phrase.Length; i++) {
+//            char c = phrase[i]; 
+//            if(c == ' ' || c == ',' || c == '.' || c == '!' || c == '?' || c ==':' || c ==';') { 
+//                 mots++;
+//            }
+//   }
+// return mots;
+
+
+// }
+
+// Console.WriteLine($"Nbre mots = {motsPhrases("La charrette est avant les boeufs.Je Pense ou pas!Qu'est ce que j'en sais.")}");
+
+
+
 // Exo 56 : écrire une fonction pour remplacer les voyelles accentuées dans un texte
 // ex : “ à é è û ï ” devient “ a e e u i ”
+
+// string ReplaceAccent(string str)
+// {
+//     string replace = "";
+//     foreach (char item in str)
+//     {
+//         switch (item)
+//         {
+//             case 'à':
+//                 replace += 'a';
+//                 break;
+
+//             case 'ä':
+//                 replace += 'a';
+//                 break;
+
+//             case 'â':
+//                 replace += 'a';
+//                 break;
+            
+//             case 'é':
+//                 replace += 'e';
+//                 break;
+            
+//             case 'è':
+//                 replace += 'e';
+//                 break;
+
+//             case 'ë':
+//                 replace += 'e';
+//                 break;
+
+//             case 'ê':
+//                 replace += 'e';
+//                 break;
+            
+//             case 'ö':
+//                 replace += 'o';
+//                 break;
+
+//             case 'ô':
+//                 replace += 'o';
+//                 break;
+            
+//             case 'ü':
+//                 replace += 'u';
+//                 break;
+
+//                 case 'î':
+//                 replace += 'i';
+//                 break;
+
+//                 case 'ï':
+//                 replace += 'i';
+//                 break;
+
+//             default:
+//                 replace += item;
+//                 break;
+//         }
+//     }
+//     return replace;
+// }
+// Console.WriteLine(ReplaceAccent("Nöüs sômmés pärtïs très tàrd"));
+
 // Exo 57 : écrire un programme qui génère un tirage de l’Euromillions aléatoirement
 // (5 numéros compris entre 1 et 50 et tous différents + 2 étoiles comprises entre 1 et 12 différentes l’une de l’autre)
+
+Random random = new Random();
+int[]numberBalls = new int[51];
+int tirage =0;
+
+for (int i = 0; i < 5; i++)
+{
+    tirage=random.Next(1,50);
+
+    if(tirage == 1 ){
+        tirage++;
+    }
+
+
+}
+return tirage;
+
+Console.WriteLine($"Les numeros sont :{tirage}, {tirage}, {tirage}, {tirage}, {tirage}");
+
+
 
 
 
