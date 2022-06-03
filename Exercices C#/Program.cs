@@ -1272,22 +1272,19 @@
 
 Random random = new Random();
 int[]numberBalls = new int[51];
-int tirage =0;
+int numero =0;
+int etoile = 0;
 
 for (int i = 0; i < 5; i++)
 {
-    tirage=random.Next(1,50);
-
-    if(tirage == 1 ){
-        tirage++;
-    }
-
+    numero=random.Next(1,50);
 
 }
-return tirage;
 
-Console.WriteLine($"Les numeros sont :{tirage}, {tirage}, {tirage}, {tirage}, {tirage}");
-
+for (int i =0;i <2; i++)
+{
+    etoile = random.Next(1,12);
+}
 
 
 
