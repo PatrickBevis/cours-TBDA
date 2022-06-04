@@ -1,4 +1,13 @@
 
+::-webkit-scrollbar {
+    background-color: #400f03;
+
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FECD45;
+    border-radius: 20px;
+}
+
 body{
     background-color: #f5deb3;
     color: white;
@@ -28,7 +37,7 @@ h3{
     position: sticky;
     top: 0;
     background-color:#400f03;
-    padding: 0.5rem 1rem 2rem 1rem;
+    
 }
 
 #header img{
@@ -217,3 +226,7 @@ display: flex;
      
 }
 
+#footer .white{
+    text-decoration: none;
+    color: white;
+}
