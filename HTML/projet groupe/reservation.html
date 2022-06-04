@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reservation.css">
+    <link rel="shortcut icon" href="./img/ico logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special Elite">
+    <title>Réservation</title>
+</head>
+<header id="header">
+    <a href="#top"><img src="./img/logo2.png"
+            alt="Le logo du restaurant : un dessin de croissant jaune sur fond marron "></a>
+<nav>
+<ul>
+    <li> <a href="acceuil.html">Accueil</a> </li>
+    <li><a href="menu.html">Menu</a></li>
+    <li> <a href="reservation.html">Réservation et Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<body id= "reserv">
+    <section class="flex bg-cadre m-50 color jc-sb align-item">
+        <div id="form">
+            <form action="" method="get">
+            <fieldset >
+                <legend><h2>Contact</h2></legend>
+                <div>Nom: <input type="text" id="name" name="name" placeholder="nom" required><span class="obligatoire">*</span></input> </div>
+                <div>Email: <input id="emailAddress" type="email" placeholder="mail"required><span class="obligatoire">*</span></div>
+                <div>N° tél: <input id="telNo" name="telNo" type="tel" placeholder="01 23 45 67 89"></div>
+                <button type="submit" class="button button:hover">Réservez !</button>
+            </fieldset>
+        </form>
+        </div>
+        <div>
+            
+            <h3>Adresse :</h3>
+            
+            
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2555.6620652101283!2d3.265426115204222!3d50.16745647943731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2bced77cacb2b%3A0xe2f03bbcc6e4f704!2sAFPA!5e0!3m2!1sfr!2sfr!4v1654087126463!5m2!1sfr!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="img-carte"></iframe>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="flex jc-c fs-30 color">
+            <i class="fa-brands fa-facebook   m-10"></i>
+            <i class="fa-brands fa-instagram  m-10"></i>
+            <i class="fa-brands fa-tiktok  m-10"></i>
+            <i class="fa-brands fa-pinterest  m-10"></i>
+        </div>
+        <section class="flex jc-sb">
+            <div class=" column  ">
+                <p class="fw-bold">
+                <h3>A propos</h3>
+                </p>
+                <p>Mentions légales</p>
+                <p>CGU</p>
+            </div>
+            <div>
+                <a href="https://github.com/PatrickBevis/cours-TBDA/tree/main/HTML/projet%20groupe"><img src="./img/logo.png" alt=""></a>
+            </div>
+        </section>
+        <div class="flex jc-c ">
+            <p>&copy; 2022 Projet-TBDA (AFPA)| Justine-Melissa-Patrick</p>
+        </div>
+    </footer>
+</body>
+
+</html>
