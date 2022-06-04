@@ -1211,12 +1211,12 @@
 //         switch (item)
 //         {
 //             case 'à':
-//                 replace += 'a';
-//                 break;
+//                // replace += 'a';
+//                // break;
 
 //             case 'ä':
-//                 replace += 'a';
-//                 break;
+//                 //replace += 'a';
+//                // break;
 
 //             case 'â':
 //                 replace += 'a';
@@ -1270,29 +1270,49 @@
 // Exo 57 : écrire un programme qui génère un tirage de l’Euromillions aléatoirement
 // (5 numéros compris entre 1 et 50 et tous différents + 2 étoiles comprises entre 1 et 12 différentes l’une de l’autre)
 
-Random random = new Random();
-int[]numberBalls = new int[51];
-int numero =0;
-int etoile = 0;
+// Random random = new Random();
+// List<int> boulesNum = new List<int>();
+// List<int> boulesEto = new List<int>();
 
-for (int i = 0; i < 5; i++)
-{
-    numero=random.Next(1,50);
+// for (int i = 1; i <=49; i++)
+// {
+//     boulesNum.Add(i);
+// }
 
-}
+// for (int i = 1; i <=12; i++)
+// {
+//     boulesEto.Add(i);
+// }
 
-for (int i =0;i <2; i++)
-{
-    etoile = random.Next(1,12);
-}
+// string numbers= "";
+// string stars= "";
 
+// for (int i = 0; i < 5; i++)
+// {
+//     int index= random.Next(0, boulesNum.Count);
+//     numbers +=index + " ";
+//    // Console.WriteLine($"Numero: {boulesNum[index]}");
+// boulesNum.Remove(boulesNum[index]);
 
+// }
 
+// Console.WriteLine("Numéros: ");
+// Console.WriteLine("");
+// Console.WriteLine(numbers);
+// Console.WriteLine("");
 
+// for (int i = 0; i < 2; i++)
+// {
+//     int index= random.Next(0, boulesEto.Count);
+//     stars +=index + " ";
+//    // Console.WriteLine($"Numero: {boulesNum[index]}");
+// boulesEto.Remove(boulesEto[index]);
+// }
 
-
-
-
+// Console.WriteLine("Etoiles: ");
+// Console.WriteLine("");
+// Console.WriteLine(stars);
+// Console.WriteLine("");
 
 
 // Random random = new Random();
@@ -1321,7 +1341,22 @@ for (int i =0;i <2; i++)
 
 
 
+Random random = new Random();
+List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
+List<string> players = new List<string> { "p1", "p2", "p3", "p4" };
 
+string jeu = "";
+
+for (int i = 0; i < 2; i++)
+{
+    int index = random.Next(0, cards.Count);
+    jeu += index+ " ";
+    cards.Remove(cards[index]);
+}
+
+Console.WriteLine("p1: ");
+Console.WriteLine("");
+Console.WriteLine(cards[jeu]);
 
 
 
