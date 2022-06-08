@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\33634\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj": {}
+    "C:\\Users\\Patrick\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\33634\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj": {
+    "C:\\Users\\Patrick\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\33634\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj",
+        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj",
         "projectName": "New Project",
-        "projectPath": "C:\\Users\\33634\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj",
-        "packagesPath": "C:\\Users\\33634\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\33634\\Desktop\\cours-TBDA\\Exercices C#\\obj\\",
+        "projectPath": "C:\\Users\\Patrick\\Desktop\\cours-TBDA\\Exercices C#\\New Project.csproj",
+        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Patrick\\Desktop\\cours-TBDA\\Exercices C#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\33634\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

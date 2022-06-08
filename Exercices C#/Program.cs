@@ -1315,6 +1315,146 @@
 // Console.WriteLine("");
 
 
+
+// Exo 58 : Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de multiplication de ce nombre dans la console, présentée comme suit (cas où l'utilisateur entre le nombre 5) 
+// 5x1 = 5
+// 5x2 = 10
+// 5x3 = 15
+// …
+// 5x10 = 50
+
+// Console.WriteLine("Choississez un nombre ");
+// int nbsaisi =Convert.ToInt32(Console.ReadLine());
+
+// List<int> multi = new List<int>{0,1,2,3,4,5,6,7,8,9,10};
+
+// foreach (var item in collection)
+// {
+    
+// }
+
+
+//PROJET ALGO (avec david et thomas)
+
+// sélectionner un produit 
+//     liste de produits{}
+// CHOISIR dans produits
+List<string> produits = new List<string>() { "Chips", "Barre chocolatée", "eau minérale", "soda", "bonbons" };
+List<double> indexPrix = new List<double>() { 1.5, 2.00, 1.45, 1.75, 1.95 };
+// insérer la monnaie
+// controler les pièces données
+// liste pièces_acceptées{}
+// rendre la monnaie
+// SI fond_inssuffisant retour Monnaie
+
+// --- Corps du programme
+
+for (int i = 0; i < produits.Count; i++)
+{
+    Console.WriteLine($"{i + 1} > {produits[i]}, {indexPrix[i]} €");
+}
+// monnaie choix : affichage
+
+Console.WriteLine();
+Console.WriteLine("Insérer la monnaie : ");
+Console.WriteLine($"Monnaie acceptée : 5- 0,05€ ; 10- 0,10€ ; 20- 0,20€ ; 50- 0,50€ ; 100- 1€; 200- 2€");
+
+// sélection monnaie
+double monnaie = 0;
+double somme = 0;
+do
+{
+    // int choix = int.Parse(Console.ReadLine());
+    
+    switch (Console.ReadLine())
+    {
+        case "5":
+            monnaie = .05;
+            
+            break;
+        case "10":
+            monnaie = .1;
+            
+            break;
+        case "20":
+            monnaie = .2;
+            
+            break;
+        case "50":
+            monnaie = .5;
+            
+            break;
+        case "100":
+            monnaie = 1;
+            
+            break;
+        case "200":
+            monnaie = 2;
+            
+            break;
+        default:
+        Console.WriteLine("erreur monnaie");
+        Console.WriteLine("Choississez une autre piece");
+            break;
+
+      
+    }
+    
+     somme += monnaie;
+    Console.WriteLine($"Le distributeur a {somme} euros de monnaie"); 
+
+} while (somme >=0 && somme <= 2);
+
+    
+
+
+Console.WriteLine("");
+// monnaie choix : affichage
+
+// selection produit
+Console.WriteLine("Choississez un produit");
+double prix=0;
+double retour=0;
+  
+  do{
+    //   int choix2 = int.Parse(Console.ReadLine());
+    switch (Console.ReadLine())
+    {
+        case "chips":
+            prix = 1.5;
+            break;
+        case "barre":
+            prix= 2;
+            break;
+        case "eau":
+            prix = 1.45;
+            break;
+        case "soda":
+            prix = 1.75;
+            break;
+        case "bonbons":
+            prix = 1.95;
+            break;
+        default:
+        Console.WriteLine("Ce produit n'existe pas");
+        Console.WriteLine("Choississez un autre produit");
+            break;
+    }
+        retour= monnaie-prix;
+    Console.WriteLine($" Le distributeur rend {retour} euros");
+} while (true);
+
+
+
+
+
+
+
+
+
+
+
+
 // Random random = new Random();
 //string[] poker = new string[] { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
 
@@ -1341,22 +1481,22 @@
 
 
 
-Random random = new Random();
-List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
-List<string> players = new List<string> { "p1", "p2", "p3", "p4" };
+// Random random = new Random();
+// List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
+// List<string> players = new List<string> { "p1", "p2", "p3", "p4" };
 
-string jeu = "";
+// string jeu = "";
 
-for (int i = 0; i < 2; i++)
-{
-    int index = random.Next(0, cards.Count);
-    jeu += index+ " ";
-    cards.Remove(cards[index]);
-}
+// for (int i = 0; i < 2; i++)
+// {
+//     int index = random.Next(0, cards.Count);
+//     jeu += index+ " ";
+//     cards.Remove(cards[index]);
+// }
 
-Console.WriteLine("p1: ");
-Console.WriteLine("");
-Console.WriteLine(cards[jeu]);
+// Console.WriteLine("p1: ");
+// Console.WriteLine("");
+// Console.WriteLine(cards[jeu]);
 
 
 
