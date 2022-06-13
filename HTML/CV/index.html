@@ -7,22 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="shortcut icon" href="./img/pb.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>CV</title>
 
 </head>
 
-<body class="margin-50 bg">
-    <div class="d-flex justify-between align-baseline color-black fs-30 position-sticky bg">
+<body><!--  class="ml-50 mr-50 " -->
+    <div class="d-flex justify-between align-baseline  fs-30 position-sticky ">
         <div class="fw-bold">
-           <a href="#haut" class="no-hover">Patrick Bévis</a> 
+            <a href="#haut" class="no-hover">Patrick Bévis</a>
         </div>
         <div>
             <nav>
-                <ul class="d-flex justify-between">
+                <ul class="d-flex justify-">
                     <li class="margin-10 pt-0"><a href="#a_propos">A propos</a></li>
                     <li class="margin-10 pt-0"><a href="#experiences">Expérience</a></li>
                     <li class="margin-10 pt-0"><a href="#competences">Compétences</a></li>
@@ -37,52 +38,168 @@
     <header>
         <div class="bg-header text-align-center br-40 " id="haut">
             <div>
-            <img src="./img/face_co.png" alt="C'est presque moi" class="img-avatar">
-        </div>
-        <div class="color-white fw-bold">Web developer</div>
-            <div class = "ico-header ">
-                <a href="https://github.com/PatrickBevis" class="fa-brands fa-github margin-30 color-white no-hover" target="blank"></a>
-                <a href="https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit" class="fa-brands fa-linkedin margin-30 color-white no-hover" target="blank"></a>
-                <a href="https://patrickbevis.com" class="fa-solid fa-earth-europe margin-30 color-white no-hover" target="blank"></a>
+                <img src="./img/face_co.png" alt="C'est presque moi" class="img-avatar">
             </div>
+            <div class="color-white fw-bold">Web developer</div>
             
-            <a href=""class="button-header no-hover2 mt-5 br-40">Mon CV</a>
-            <a href="#contact"class= "button-header1 no-hover2 mt-5 br-40">Engagez-moi !</a>
-            
+            <a href="" class="button-header no-hover2 mt-5 br-40">Mon CV</a>
+            <a href="#contact" class="button-header1 no-hover2 mt-5 br-40">Engagez-moi !</a>
+
         </div>
     </header>
     <main>
-        <section id="a_propos" class="border-block br-10">
+       
+            <nav id="social-sidebar">       
+              <ul>
+                <li>
+                  <a href="https://twitter.com/m412c0b" class="entypo-twitter" target="_blank"><i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://dribbble.com/m412c0" class="entypo-dribbble" target="_blank"><i class="fa-brands fa-linkedin"></i>
+                    <span>Linkedin</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.behance.net/m412c0" class="entypo-behance " target="_blank"><i class="fa-solid fa-earth-europe"></i>
+                    <span>Mon site internet</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        <section id="a_propos" class="border-block br-10 ">
             <h4>A propos...</h4>
-            <p class="l-block ml-30">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad laboriosam, exercitationem repudiandae vitae, unde sint totam architecto?
-            </p> 
+            <div class="d-flex justify-between ">
+                <p class="ml-30 l-block text-align-justify">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+                <p class="mr-30 r-block">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+            </div>
         </section>
         <section id="experiences" class="border-block br-10">
             <h4>Expériences</h4>
-            <p class="r-block mr-30">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad laboriosam, exercitationem repudiandae vitae, unde sint totam architecto?
-            </p>
+            <div class="d-flex justify-between ">
+                <p class="ml-30 l-block text-align-justify">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+                <p class="mr-30 r-block">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+            </div>
         </section>
         <section id="competences" class="border-block br-10">
             <h4>Compétences</h4>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad laboriosam, exercitationem repudiandae vitae, unde sint totam architecto?
+            <div class="d-flex justify-between ">
+                <p class="ml-30 l-block text-align-justify">
 
+
+                </p>
+                <p class="mr-30 r-block">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+            </div>
         </section>
         <section id="formations" class="border-block br-10">
             <h4>Formations</h4>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad laboriosam, exercitationem repudiandae vitae, unde sint totam architecto?
-
+            <div class="d-flex justify-between ">
+                <p class="ml-30 l-block text-align-justify">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+                <p class="mr-30 r-block">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+            </div>
         </section>
         <section id="projets" class="border-block br-10">
             <h4>Projets</h4>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad laboriosam, exercitationem repudiandae vitae, unde sint totam architecto?
-
+            <div class="d-flex justify-between ">
+                <p class="ml-30 l-block text-align-justify">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+                <p class="mr-30 r-block">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+            </div>
         </section>
-        <section id="contact"class="border-block br-10">
+        <section id="contact" class="border-block br-10">
             <h4>Contact</h4>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad laboriosam, exercitationem repudiandae vitae, unde sint totam architecto?
-
+            <div class="d-flex justify-between ">
+                <p class="ml-30 l-block text-align-justify">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+                <p class="mr-30 r-block">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil deleniti eos voluptates, culpa
+                    blanditiis aliquid nulla ullam, id exercitationem perspiciatis non aperiam! Vero sit commodi neque
+                    temporibus debitis et dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    repudiandae
+                    fugit, doloremque officiis inventore ad ipsam. Harum aspernatur vero reprehenderit aut ad
+                    laboriosam,
+                    exercitationem repudiandae vitae, unde sint totam architecto?
+                </p>
+            </div>
         </section>
     </main>
     <footer>

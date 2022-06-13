@@ -1,18 +1,21 @@
 
 /*------------------RESET------------------------*/
+
 a{
   text-decoration: none;
-  color:white;
+  color:black;
 }
 
-a:hover{
+
+
+nav a:hover{
   color: #38AFE6;
 }
 
-a.no-hover:hover{
+nav a.no-hover:hover{
   color: white !important;
 }
-a.no-hover2:hover{
+nav a.no-hover2:hover{
   color:black;
 }
 
@@ -20,19 +23,22 @@ a.no-hover2:hover{
 ul{
   list-style-type: none;
   margin: 0;
+  padding:0;
 }
 body{
   font-size: 20px;
 }
 
 h4{
-  color: grey;
+  color: white;
   font-weight:bold;
   margin:10px;
   margin-left: 30px;
+  font-size: 30px;
 
 }
- 
+
+
 
 /*display*/
 .d-flex{
@@ -50,7 +56,15 @@ h4{
 .text-align-center{
   text-align: center;
 }
+
+.text-align-justify{
+  text-align: justify;
+}
 /*margin*/
+
+.margin-0{
+  margin:0px
+}
 
 .margin-10{
   margin: 10px;
@@ -80,9 +94,20 @@ h4{
   margin-left: 30px;
 }
 
+.ml-50{
+
+  margin-left: 50px;
+}
+
+.mr-50{
+
+  margin-right: 50px;
+}
+
 .pt-0{
   padding-top: 0px;
 }
+
 
 .list-type{
   list-style-type: none;
@@ -93,6 +118,7 @@ h4{
 
 .color-black{
   color:black;
+  
 }
 .color-grey{
   color: grey;
@@ -133,13 +159,15 @@ h4{
 .bg{
   background-color: rgb(0, 0, 0);
 }
+
+
 /*image*/
 .img-avatar{
   width: 155px;
   height: 155px;
   margin-top: 15px;
   border-radius: 50%;
-  background-color:#126f9b;
+  background-color:rgb(252, 248, 6);
   
 }
 
@@ -196,15 +224,17 @@ h4{
 }
 
 .l-block{
-  float: left;
-    width: 40%;
+  display: flex;
+  
+    width: 45%;
     text-align: justify;
 }
 
 .r-block{
-  display:grid;
-    width: 40%;
-    text-align: justify;
+  display:flex;
+  width: 45%;
+  text-align: justify;
+  
 
 }
 
@@ -215,3 +245,79 @@ h4{
 z-index: 1;
 
 }
+
+
+@use postcss-preset-env {
+  stage: 0;
+}
+
+
+
+/* ---------- Social Sidebar ---------- */
+
+#social-sidebar {
+	right: 0;
+	margin-top: -75px; /* (li * a:width) / -2 */
+	position: fixed;
+	top: 50%;
+}
+
+#social-sidebar li:first-child a { border-radius: 0 5px 0 0; }
+#social-sidebar li:last-child a { border-radius: 0 0 5px 0; }
+
+#social-sidebar a {
+	background: black;
+	color: #fff;
+	display: block;
+	height: 50px;
+	font-size: 18px;
+	line-height: 50px;
+	position: relative;
+	text-align: center;
+	width: 50px;
+  
+}
+
+#social-sidebar a:hover span {
+	left: 130%;
+	opacity: 1;
+}
+
+#social-sidebar a span {
+	border-radius: 3px;
+	line-height: 24px;
+	left: -100%;
+	margin-top: -16px;
+	opacity: 0;
+	padding: 4px 8px;
+	position: absolute;
+	transition: opacity .3s, left .4s;
+	top: 50%;
+  white-space: nowrap;
+	z-index: -1;
+}
+
+#social-sidebar a span:before {
+	content: "";
+	display: block;
+	height: 8px;
+	left: -4px;
+	margin-top: -4px;
+	position: absolute;
+	top: 50%;
+	transform: rotate(45deg);
+	width: 8px;
+	z-index: -2;
+}
+
+#social-sidebar a[class*="twitter"]:hover,
+#social-sidebar a[class*="twitter"] span,
+#social-sidebar a[class*="twitter"] span:before { background: #171515; }
+
+#social-sidebar a[class*="dribbble"]:hover,
+#social-sidebar a[class*="dribbble"] span,
+#social-sidebar a[class*="dribbble"] span:before { background: #0e76a8 ; }
+
+#social-sidebar a[class*="behance"]:hover,
+#social-sidebar a[class*="behance"] span,
+#social-sidebar a[class*="behance"] span:before { background: #38AFE6; }
