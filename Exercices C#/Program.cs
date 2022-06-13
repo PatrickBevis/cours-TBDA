@@ -1336,113 +1336,112 @@
 
 //PROJET ALGO (avec david et thomas)
 
-// sélectionner un produit 
-//     liste de produits{}
-// CHOISIR dans produits
-List<string> produits = new List<string>() { "Chips", "Barre chocolatée", "eau minérale", "soda", "bonbons" };
-List<double> indexPrix = new List<double>() { 1.5, 2.00, 1.45, 1.75, 1.95 };
-// insérer la monnaie
-// controler les pièces données
-// liste pièces_acceptées{}
-// rendre la monnaie
-// SI fond_inssuffisant retour Monnaie
+// // sélectionner un produit 
+// //     liste de produits{}
+// // CHOISIR dans produits
+// List<string> produits = new List<string>() { "Chips", "Barre chocolatée", "eau minérale", "soda", "bonbons" };
+// List<double> indexPrix = new List<double>() { 1.5, 2.00, 1.45, 1.75, 1.95 };
+// // insérer la monnaie
+// // controler les pièces données
+// // liste pièces_acceptées{}
+// // rendre la monnaie
+// // SI fond_inssuffisant retour Monnaie
 
-// --- Corps du programme
+// // --- Corps du programme
 
-for (int i = 0; i < produits.Count; i++)
-{
-    Console.WriteLine($"{i + 1} > {produits[i]}, {indexPrix[i]} €");
-}
-// monnaie choix : affichage
+// for (int i = 0; i < produits.Count; i++)
+// {
+//     Console.WriteLine($"{i+1} > {produits[i]}, {indexPrix[i]} €");
+// }
+// // monnaie choix : affichage
 
-Console.WriteLine();
-Console.WriteLine("Insérer la monnaie : ");
-Console.WriteLine($"Monnaie acceptée : 5- 0,05€ ; 10- 0,10€ ; 20- 0,20€ ; 50- 0,50€ ; 100- 1€; 200- 2€");
+// Console.WriteLine();
+// Console.WriteLine("Insérer la monnaie : ");
+// Console.WriteLine($"Monnaie acceptée : 5- 0,05 euros ; 10- 0,10 euros ; 20- 0,20 euros ; 50- 0,50 euros ; 100- 1 euros; 200- 2 euros");
 
-// sélection monnaie
-double monnaie = 0;
-double somme = 0;
-do
-{
-    // int choix = int.Parse(Console.ReadLine());
+// // sélection monnaie
+// double monnaie = 0;
+
+// do
+// {
+//     // int choix = int.Parse(Console.ReadLine());
     
-    switch (Console.ReadLine())
-    {
-        case "5":
-            monnaie = .05;
+//     switch (Console.ReadLine())
+//     {
+//         case "5":
+//             monnaie += .05;
             
-            break;
-        case "10":
-            monnaie = .1;
+//             break;
+//         case "10":
+//             monnaie += .1;
             
-            break;
-        case "20":
-            monnaie = .2;
+//             break;
+//         case "20":
+//             monnaie += .2;
             
-            break;
-        case "50":
-            monnaie = .5;
+//             break;
+//         case "50":
+//             monnaie += .5;
             
-            break;
-        case "100":
-            monnaie = 1;
+//             break;
+//         case "100":
+//             monnaie += 1;
             
-            break;
-        case "200":
-            monnaie = 2;
+//             break;
+//         case "200":
+//             monnaie += 2;
             
-            break;
-        default:
-        Console.WriteLine("erreur monnaie");
-        Console.WriteLine("Choississez une autre piece");
-            break;
+//             break;
+//         default:
+//         Console.WriteLine("erreur monnaie");
+//         Console.WriteLine("Choississez une autre piece");
+//             break;
 
       
-    }
+//     }
     
-     somme += monnaie;
-    Console.WriteLine($"Le distributeur a {somme} euros de monnaie"); 
+//     Console.WriteLine($"Le distributeur a {monnaie} euros de monnaie"); 
 
-} while (somme >=0 && somme <= 2);
+// } while (monnaie >=0 && monnaie < 2);
 
     
 
 
-Console.WriteLine("");
-// monnaie choix : affichage
+// Console.WriteLine("");
+// // monnaie choix : affichage
 
-// selection produit
-Console.WriteLine("Choississez un produit");
-double prix=0;
-double retour=0;
+// // selection produit
+// Console.WriteLine("Choississez un produit");
+// double prix=0;
+// double retour=0;
   
-  do{
-    //   int choix2 = int.Parse(Console.ReadLine());
-    switch (Console.ReadLine())
-    {
-        case "chips":
-            prix = 1.5;
-            break;
-        case "barre":
-            prix= 2;
-            break;
-        case "eau":
-            prix = 1.45;
-            break;
-        case "soda":
-            prix = 1.75;
-            break;
-        case "bonbons":
-            prix = 1.95;
-            break;
-        default:
-        Console.WriteLine("Ce produit n'existe pas");
-        Console.WriteLine("Choississez un autre produit");
-            break;
-    }
-        retour= monnaie-prix;
-    Console.WriteLine($" Le distributeur rend {retour} euros");
-} while (true);
+//   do{
+//     //   int choix2 = int.Parse(Console.ReadLine());
+//     switch (Console.ReadLine())
+//     {
+//         case "A1": //CHIPS
+//             prix = 1.5;
+//             break;
+//         case "A2": //BARRE CHOCO
+//             prix= 2;
+//             break;
+//         case "B1": //EAU
+//             prix = 1.45;
+//             break;
+//         case "B2": //SODA
+//             prix = 1.75;
+//             break;
+//         case "A3": //BONBONS
+//             prix = 1.95;
+//             break;
+//         default:
+//         Console.WriteLine("Ce produit n'existe pas");
+//         Console.WriteLine("Choississez un autre produit");
+//             break;
+//     }
+//         retour = (monnaie-prix);
+//     Console.WriteLine($"Le distributeur rend {retour} euros");
+// } while (true);
 
 
 
@@ -1481,22 +1480,43 @@ double retour=0;
 
 
 
-// Random random = new Random();
-// List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
-// List<string> players = new List<string> { "p1", "p2", "p3", "p4" };
+Random random = new Random();
+List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
+List<string> players = new List<string> {};
 
-// string jeu = "";
+Console.WriteLine("Voulez-vous ajouter un  joueur ? (o/n)");
+string ajouter= Console.ReadLine();
+while(ajouter =="o")
+{
+    switch(Console.ReadLine())
+    {
+        case "P1":
+    players.Add("P1");
+    Console.WriteLine("P1");
+    break;
 
-// for (int i = 0; i < 2; i++)
-// {
-//     int index = random.Next(0, cards.Count);
-//     jeu += index+ " ";
-//     cards.Remove(cards[index]);
-// }
+}
+}
 
-// Console.WriteLine("p1: ");
-// Console.WriteLine("");
-// Console.WriteLine(cards[jeu]);
+for (int i = 0; i < 2; i++)
+{
+    int index = random.Next(0, cards.Count);
+    
+    Console.Write(cards[index] + " ");
+    cards.Remove(cards[index]);
+    Thread.Sleep(1000);
+}    
+Console.WriteLine("");
+Console.WriteLine("board:");
+
+for (int i =0; i< 5; i++)
+
+{
+int index = random.Next(0, cards.Count);
+    Console.Write(cards[index] + " ");
+    cards.Remove(cards[index]);
+    Thread.Sleep(2000);
+}
 
 
 
