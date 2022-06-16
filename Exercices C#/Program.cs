@@ -1221,11 +1221,11 @@
 //             case 'â':
 //                 replace += 'a';
 //                 break;
-            
+
 //             case 'é':
 //                 replace += 'e';
 //                 break;
-            
+
 //             case 'è':
 //                 replace += 'e';
 //                 break;
@@ -1237,7 +1237,7 @@
 //             case 'ê':
 //                 replace += 'e';
 //                 break;
-            
+
 //             case 'ö':
 //                 replace += 'o';
 //                 break;
@@ -1245,7 +1245,7 @@
 //             case 'ô':
 //                 replace += 'o';
 //                 break;
-            
+
 //             case 'ü':
 //                 replace += 'u';
 //                 break;
@@ -1316,7 +1316,7 @@
 
 
 
-// Exo 58 : Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de multiplication de ce nombre dans la console, présentée comme suit (cas où l'utilisateur entre le nombre 5) 
+//Exo 58 : Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de multiplication de ce nombre dans la console, présentée comme suit (cas où l'utilisateur entre le nombre 5) 
 // 5x1 = 5
 // 5x2 = 10
 // 5x3 = 15
@@ -1325,13 +1325,144 @@
 
 // Console.WriteLine("Choississez un nombre ");
 // int nbsaisi =Convert.ToInt32(Console.ReadLine());
-
+// int result =0;
 // List<int> multi = new List<int>{0,1,2,3,4,5,6,7,8,9,10};
 
-// foreach (var item in collection)
+// for (int i = 0; i < 11; i++)
 // {
-    
+//     result= nbsaisi*index[i];
 // }
+
+// Exo 59 : écrire une fonction qui calcule (et retourne) le nombre de jours entre 2 dates
+// Exo 60 : écrire une fonction qui renvoie true si le mot qui lui est passé en paramètre est un Palindrome (false sinon)
+// Exo 61 : écrire un algorithme qui réalise le tirage au sort du jeux “des chiffres et des lettres”
+// Demander à l’utilisateur de choisir entre consonne et voyelle et lui afficher la lettre tirée au sort. Il faut faire un tirage de 9 lettres au total.
+
+// string[] tableauConsonnes = new string[] {"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"};
+// string[] tableauVoyelles = new string[]{"a","e","y","u","i","o"}; 
+// int counter = 0;
+// while(counter <= 9){
+// Console.WriteLine("Choisissez entre une consonne ou une voyelle");
+// string choix = Console.ReadLine();
+// if(choix == "c"){
+//     string consonneAffichee = renvoieAleatoireLettre(tableauConsonnes);
+//     Console.WriteLine(consonneAffichee);
+// }else{
+//     string voyelleAffichee = renvoieAleatoireLettre(tableauVoyelles);
+//     Console.WriteLine(voyelleAffichee);
+// }
+// counter++;
+// }
+
+
+// string renvoieAleatoireLettre(string[] tab){
+//     string result = "";
+//     Random aleatoire = new Random();
+//     int indice = aleatoire.Next(tab.Length);
+//     result = tab[indice];
+
+//     return result;
+// }
+
+
+// Exo 62 : Le Juste Prix
+// Choisir un prix (entier) aléatoirement compris entre 0 et 1000€.
+// L’utilisateur doit deviner le prix.
+// Si le prix donné par l’utilisateur est trop bas, on lui écrit “+ cher”
+// Si le prix donné par l’utilisateur est trop haut, on lui écrit “- cher”
+// Quand il trouve le prix, on lui indique qu’il a gagné et on lui donne le nombre de tours qui lui a fallu pour trouver ce prix
+
+// Random random = new Random();
+// List<int> prix = new List<int> { };
+// int prixATrouver = 0;
+
+
+// for (int i = 0; i < 1000; i++)
+// {
+//     prix.Add(i);
+
+// }
+
+// for (int i = 0; i < 1; i++)
+// {
+//     int index = random.Next(0, prix.Count);
+//     // Console.WriteLine(prix[index]);
+//     prixATrouver = prix[index];
+// }
+
+// int nbSaisi = 0;
+// int compt =1;
+
+//  Console.WriteLine("Saississez un nombre entre 0 et 1000");
+// Console.ReadLine();
+// while(nbSaisi !=prixATrouver){
+   
+// if ( nbSaisi < prixATrouver ){
+//     Console.WriteLine("plus cher");
+//     Console.WriteLine("Saississez un nombre entre 0 et 1000");
+//     compt++;
+// }
+
+// else if ( nbSaisi > prixATrouver ){
+//     Console.WriteLine("moins cher");
+//     Console.WriteLine("Saississez un nombre entre 0 et 1000");
+//    compt++;
+// }
+
+//  nbSaisi = Convert.ToInt32(Console.ReadLine());
+
+// }
+// Console.WriteLine($"Le nombre de tours est {compt}");
+
+
+// Exo 63 : Le Juste Prix inversé
+// Inversez les rôles avec l’ordinateur
+// Cette fois vous fixez un prix (le saisir en début de partie) et l’ordinateur doit trouver le prix
+// A chaque réponse de l’ordinateur, vous devez lui dire si c’est + ou - (en saisissant + ou -)
+// Si l’ordinateur trouve, un message s’affiche automatiquement avec le nombre de tour qu’il lui aura fallu pour trouver le prix
+
+// Console.WriteLine("Fixer un prix compris entre 1 et 1000");
+// int price; int.TryParse(Console.ReadLine(), out price);
+// while (price < 1 || price > 1000)
+// {
+//     Console.WriteLine("Fixer un prix compris entre 1 et 1000");
+//     int.TryParse(Console.ReadLine(), out price);
+// }
+// int counter = 1;
+// int min = 1;
+// int max = 1000;
+// int mid = (min + max) / 2;
+// Thread.Sleep(2000);
+// Console.WriteLine("proposition ordi " + mid);
+// while (mid != price)
+// {
+//     if (mid < price)
+//     {
+//         Console.WriteLine("plus cher");
+//         min = mid;
+//     }
+//     if (mid > price)
+//     {
+//         Console.WriteLine("moins cher");
+//         max = mid;
+//     }
+//     mid = (min + max) / 2;
+//     counter++;
+//     Thread.Sleep(1000);
+//     Console.WriteLine("");
+//     Console.WriteLine("proposition ordi " + mid);
+// }
+// Console.WriteLine("l'ordi a trouver en " + counter + " tours");
+
+
+
+
+
+// Exo 64 : écrire un algorithme qui tri par ordre croissant un tableau d’entiers passé en paramètre (sans utiliser les méthode déjà existantes en C#) - Faire une recherche sur les tris en algorithmie …
+
+
+
+
 
 
 //PROJET ALGO (avec david et thomas)
@@ -1365,46 +1496,46 @@
 // do
 // {
 //     // int choix = int.Parse(Console.ReadLine());
-    
+
 //     switch (Console.ReadLine())
 //     {
 //         case "5":
 //             monnaie += .05;
-            
+
 //             break;
 //         case "10":
 //             monnaie += .1;
-            
+
 //             break;
 //         case "20":
 //             monnaie += .2;
-            
+
 //             break;
 //         case "50":
 //             monnaie += .5;
-            
+
 //             break;
 //         case "100":
 //             monnaie += 1;
-            
+
 //             break;
 //         case "200":
 //             monnaie += 2;
-            
+
 //             break;
 //         default:
 //         Console.WriteLine("erreur monnaie");
 //         Console.WriteLine("Choississez une autre piece");
 //             break;
 
-      
+
 //     }
-    
+
 //     Console.WriteLine($"Le distributeur a {monnaie} euros de monnaie"); 
 
 // } while (monnaie >=0 && monnaie < 2);
 
-    
+
 
 
 // Console.WriteLine("");
@@ -1414,7 +1545,7 @@
 // Console.WriteLine("Choississez un produit");
 // double prix=0;
 // double retour=0;
-  
+
 //   do{
 //     //   int choix2 = int.Parse(Console.ReadLine());
 //     switch (Console.ReadLine())
@@ -1444,7 +1575,121 @@
 // } while (true);
 
 
+////////////////////////////////PENDU\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// Créer un tableau de 10 mots d’au moins 7 lettres (pas d’accents ni de traits d’union)
+// Tirer au sort un mot
+// Afficher le mot caché à l’utilisateur (ex : pour le mot algorithme, on affiche - - - - - - - - - -) 
+// Demander au joueur de saisir une lettre
+// Si la lettre est présente dans le mot, remplacer les tirets correspondants par la lettre
+// Sinon lui indiquer combien il lui reste de tours pour trouver le mot
+// Recommencer jusqu'à ce que je joueur ait trouvé toutes les lettres du mots ou qu’il ait atteint le nombre maximal de tours
+// Si le nombre de tour maximal est atteint avant que toutes les lettres du mot ne soient révélées, c’est perdu, sinon c’est gagné !
+// Le nombre de tours est égale au double du nombre de lettres différentes présentes dans le mot (ex : pour le mot internet, il y a 5 lettres différentes, le nombre de tours maxi pour trouver le mot sera 10)
 
+//Créer un tableau de 10 mots d’au moins 7 lettres (pas d’accents ni de traits d’union)
+// string[] words =
+// {
+//     "INTERNET",
+//     "ALGORITHME",
+//     "APPLICATION",
+//     "PROTOCOLE",
+//     "JAVASCRIPT",
+//     "WORLD WIDE WEB",
+//     "ORDINATEUR",
+//     "CLAVIER",
+//     "INFORMATIQUE",
+//     "PROGRAMME"
+// };
+
+// //Tirer au sort un mot
+// int random = new Random().Next(0, 9);
+// string wordToFind = words[random];
+
+// //Le nombre de tours est égale au double du nombre de lettres différentes présentes dans le mot
+// //(ex : pour le mot internet, il y a 5 lettres différentes, le nombre de tours maxi pour trouver le mot sera 10)
+// Dictionary<char, int> alphabet = new Dictionary<char, int>();
+// for (int i = 65; i <= 90; i++)
+// {
+//     alphabet.Add((char)i, 0);
+// }
+
+// foreach (char c in wordToFind)
+// {
+//     if (alphabet.ContainsKey(c))
+//     {
+//         alphabet[c]++;
+//     }
+// }
+// int nbTour = alphabet.Count(item => item.Value > 0) * 2;
+
+// Console.WriteLine($"Vous avez le droit à {nbTour} erreurs pour trouver le mot mystère");
+// Thread.Sleep(500);
+
+// //Afficher le mot caché à l’utilisateur (ex : pour le mot algorithme, on affiche _ _ _ _ _ _ _ _ _ _ )
+// char[] displayedWord = new char[wordToFind.Length];
+// for (int i = 0; i < wordToFind.Length; i++)
+// {
+//     char c = wordToFind[i];
+//     if (c != ' ')
+//     {
+//         displayedWord[i] = '_';
+//     }
+//     else
+//     {
+//         displayedWord[i] = ' ';
+//     }
+// }
+// Console.WriteLine(String.Join(' ', displayedWord));
+
+// //Recommencer jusqu'à ce que je joueur ait trouvé toutes les lettres du mots ou qu’il ait atteint le nombre maximal de tours
+// int tourCounter = 0;
+// while (nbTour - tourCounter > 0)
+// {
+//     Thread.Sleep(500);//Demander au joueur de saisir une lettre
+//     Console.WriteLine("Saisir une lettre");
+//     string inputLetter = Console.ReadLine().Substring(0, 1);
+
+//     bool foundLetter = false;
+//     //Si la lettre est présente dans le mot, remplacer les tirets correspondants par la lettre
+//     for (int i = 0; i < wordToFind.Length; i++)
+//     {
+//         char c = wordToFind[i];
+//         if (c.ToString() == inputLetter.ToUpper())
+//         {
+//             displayedWord[i] = c;
+//             foundLetter = true;
+//         }
+//     }
+//     Thread.Sleep(1000);
+//     if (foundLetter)
+//     {
+//         Console.WriteLine("Bien joué !");
+//     }
+//     else
+//     {
+//         //Sinon lui indiquer combien il lui reste de tours pour trouver le mot
+//         Console.WriteLine("Pas de chance !");
+//         Console.WriteLine($"Il vous reste {nbTour - ++tourCounter} chance(s) pour trouver le mot mystère ... ");
+//     }
+
+//     Console.WriteLine(String.Join(' ', displayedWord));
+
+//     //Recommencer jusqu'à ce que je joueur ait trouvé toutes les lettres du mots ou qu’il ait atteint le nombre maximal de tours
+//     if (displayedWord.Count(c => c == '_') == 0)
+//     {
+//         Console.WriteLine("Bravo ! Vous avez gagné !");
+//         break;//C'est gagné
+//     }
+
+
+//     //bool stop = true;
+// }
+// if (nbTour - tourCounter == 0)//C'est perdu
+// {
+//     Thread.Sleep(1000);
+//     Console.WriteLine("Perdu ! Pendu !");
+//     Console.WriteLine("Le mot mystère était : " + wordToFind);
+// }
 
 
 
@@ -1484,19 +1729,45 @@ Random random = new Random();
 List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
 List<string> players = new List<string> {"P1","P2","P3","P4"};
 
+string ajouter;
 
-Console.WriteLine("Voulez-vous ajouter un  joueur ? (o/n)");
-string ajouter= Console.ReadLine();
+do{
+    Console.WriteLine("Ajouter un nouveau joueur (o/n)");
 
+    switch (Console.ReadLine())
+    {   Console.WriteLine("Tapez P1");
 
-for (int i = 0; i < 2; i++)
+        case "P1": 
+            ajouter= "P1";
+            
+            for (int i = 0; i < 2; i++)
 {
-    int index = random.Next(0, cards.Count);
-    
+     int index = random.Next(0, cards.Count);
+
     Console.Write(cards[index] + " ");
     cards.Remove(cards[index]);
     Thread.Sleep(1000);
-}    
+}   
+            break;
+        case "P2": 
+            ajouter= "P2";
+            break;
+        case "P3": //EAU
+            ajouter= "P3";
+            break;
+        case "P4": //SODA
+            ajouter= "P4";
+            break;
+       
+        default:
+        Console.WriteLine("Trop de joueur");
+        break;
+    }
+     
+} while (false);
+
+
+
 Console.WriteLine("");
 Console.WriteLine("board:");
 
