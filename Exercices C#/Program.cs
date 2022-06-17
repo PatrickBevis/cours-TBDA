@@ -1725,21 +1725,27 @@
 
 
 
+
 Random random = new Random();
 List<string> cards = new List<string> { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah", "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac" };
 List<string> players = new List<string> {"P1","P2","P3","P4"};
 
-string ajouter;
 
-do{
-    Console.WriteLine("Ajouter un nouveau joueur (o/n)");
+string ajouter = "o";
+string player="";
+ while (ajouter == "o"){
+ 
+  
+Console.WriteLine("Tapez en suivant p1,p2,p3,p4");
+player=Console.ReadLine();
+  
 
-    switch (Console.ReadLine())
-    {   Console.WriteLine("Tapez P1");
+    switch (player)
+    {   
 
-        case "P1": 
-            ajouter= "P1";
-            
+        case "p1": 
+        
+
             for (int i = 0; i < 2; i++)
 {
      int index = random.Next(0, cards.Count);
@@ -1748,15 +1754,55 @@ do{
     cards.Remove(cards[index]);
     Thread.Sleep(1000);
 }   
+players.Remove("p1");
+Console.WriteLine("");
+Console.WriteLine("Ajouter un nouveau joueur (o/n)"); 
+ajouter = Console.ReadLine();
             break;
-        case "P2": 
-            ajouter= "P2";
+
+        case "p2": 
+            ajouter= "p2";
+             for (int i = 0; i < 2; i++)
+{
+     int index = random.Next(0, cards.Count);
+
+    Console.Write(cards[index] + " ");
+    cards.Remove(cards[index]);
+    Thread.Sleep(1000);
+}   
+players.Remove("p2");
+            Console.WriteLine("");
+Console.WriteLine("Ajouter un nouveau joueur (o/n)"); 
+ajouter = Console.ReadLine();
             break;
-        case "P3": //EAU
-            ajouter= "P3";
+            
+        case "p3":
+            ajouter= "p3";
+                         for (int i = 0; i < 2; i++)
+{
+     int index = random.Next(0, cards.Count);
+
+    Console.Write(cards[index] + " ");
+    cards.Remove(cards[index]);
+    Thread.Sleep(1000);
+}   
+players.Remove("p3");
+            Console.WriteLine("");
+Console.WriteLine("Ajouter un nouveau joueur (o/n)"); 
+ajouter = Console.ReadLine();
             break;
-        case "P4": //SODA
-            ajouter= "P4";
+
+        case "p4": 
+            ajouter= "p4";
+                         for (int i = 0; i < 2; i++)
+{
+     int index = random.Next(0, cards.Count);
+
+    Console.Write(cards[index] + " ");
+    cards.Remove(cards[index]);
+    Thread.Sleep(1000);
+}   
+players.Remove("p4");
             break;
        
         default:
@@ -1764,11 +1810,11 @@ do{
         break;
     }
      
-} while (false);
+}
 
 
 
-Console.WriteLine("");
+
 Console.WriteLine("board:");
 
 for (int i =0; i< 5; i++)
